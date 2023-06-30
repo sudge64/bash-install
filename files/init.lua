@@ -66,6 +66,9 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
+  -- Custom addition, catppuccin colorscheme
+  { "catppuccin//nvim", name = "catppuccin", priority = 1000},
+
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -197,6 +200,9 @@ vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
+
+-- Custom addition, catppuccin colorscheme
+vim.cmd.colorscheme "catppuccin-macchiato"
 
 -- Custom addition, relative line numbers
 vim.wo.relativenumber = true
