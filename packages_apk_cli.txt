@@ -1,0 +1,1 @@
+htop cmatrix neofetch zsh cifs-utils neovim shadow

@@ -5,3 +5,5 @@
 # https://cj-wade.com
 # https://github.com/sudge64
 
+echo "Install CLI packages"
+apk add $(cat packages_apk_cli.txt) -y
