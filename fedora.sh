@@ -16,9 +16,9 @@ echo "Add Flathub repo"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "Install CLI packages"
-dnf install util-linux-user $(cat packages_cli.txt) -y
+dnf install util-linux-user $(cat packages_dnf_cli.txt) -y
 echo "Install Graphical packages"
-dnf install util-linux-user $(cat packages_graphical.txt) -y
+dnf install util-linux-user $(cat packages_dnf_graphical.txt) -y
 
 echo "Group Install Development Tools and Libraries"
 dnf groupinstall "Development Tools" "Development Libraries" -y

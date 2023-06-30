@@ -60,7 +60,7 @@ then
     $package_manager upgrade
     if grep -q "Nobara" $release_file
     then
-        dconf load / < ./files/nobara.dconf
+        sudo dconf load / < ./files/nobara.dconf
     fi
     source ./fedora.sh
     check_choice
@@ -76,7 +76,7 @@ then
     $package_manager update && $package_manager upgrade
     if grep -q "Pop" $release_file
     then
-        dconf load / < ./files/settings.dconf
+        sudo dconf load / < ./files/settings.dconf
     fi
     source ./debian.sh
     check_choice

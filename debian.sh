@@ -6,10 +6,10 @@
 # https://github.com/sudge64
 
 echo "Install cli packages."
-apt install $(cat packages_cli.txt) -y
+apt install $(cat packages_apt_cli.txt) -y
 
 echo "Install graphical packages."
-apt install $(cat packages_graphical.txt) -y
+apt install $(cat packages_apt_graphical.txt) -y
 
 echo "Install dependencies for Neovim."
 apt install python3.10-venv ninja-build gettext libtool libtool-bin cmake g++ pkg-config unzip curl doxygen -y
