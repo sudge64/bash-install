@@ -50,6 +50,7 @@ function check_choice(){
 }
 
 source ./dotfiles.sh -u $SUDO_USER
+source ./github.sh -u $SUDO_USER
 
 # Main if-else block,
 # ID's OS, updates packages, and runs the corresponding script.
