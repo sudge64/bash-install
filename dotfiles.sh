@@ -30,7 +30,7 @@ then
     sudo -u $user_name rm /home/$user_name/.local/share/fonts/Meslo.zip
 fi
 
-if [ ! -d /home/$user_name/.config/nvim ]
+if [ ! -f /home/$user_name/.config/nvim/init.lua ]
 then
     echo "Copy init.lua."
     sudo -u $user_name mkdir /home/$user_name/.config/nvim
