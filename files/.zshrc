@@ -18,7 +18,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias updateD="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
-alias updateF="sudo dnf update -y && sudo dnf upgrade -y && flatpak update -y"
+alias upgradeF="sudo dnf upgrade -y && flatpak update -y"
 alias updateA="sudo pacman -Syu -y && flatpak update -y"
 alias updateM="brew update && brew upgrade"
 alias ll="ls -l"
