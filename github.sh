@@ -15,14 +15,23 @@ done
 
 echo "Non sudo user name : $user_name"
 
-echo "Install zsh-syntax-highlighting from GitHub"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/$user_name/.zsh/zsh-syntax-highlighting
+if [ ! -d /home/$user_name/.zsh/zsh-syntax-highlighting ]
+then
+    echo "Install zsh-syntax-highlighting from GitHub"
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/$user_name/.zsh/zsh-syntax-highlighting
+fi
 
-echo "Install zsh-syntax-highlighting from GitHub"
-git clone https://github.com/zsh-users/zsh-autosuggestions /home/$user_name/.zsh/zsh-autosuggestions
+if [ ! -d /home/$user_name/.zsh/zsh-autosuggestions ]
+then
+    echo "Install zsh-syntax-highlighting from GitHub"
+    git clone https://github.com/zsh-users/zsh-autosuggestions /home/$user_name/.zsh/zsh-autosuggestions
+fi
 
-echo "Install powerlevel10k"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/$user_name/.zsh/powerlevel10k
+if [ ! -d /home/$user_name/.zsh/powerlevel10k ]
+then
+    echo "Install powerlevel10k"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/$user_name/.zsh/powerlevel10k
+fi
 
 echo "Touch zshhistory"
 touch "/home/$user_name/.cache/zshhistory"
