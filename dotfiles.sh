@@ -37,14 +37,14 @@ then
     sudo -u $user_name cp ./files/init.lua /home/$user_name/.config/nvim/
 fi
 
-if [ ! -d /home/$user_name/.config/kitty ]
+if [ ! -f /home/$user_name/.config/kitty/kitty.conf ]
 then
     echo "Copy kitty.conf."
     sudo -u $user_name mkdir /home/$user_name/.config/kitty
     sudo -u $user_name cp ./files/kitty.conf /home/$user_name/.config/kitty/
 fi
 
-if [ ! -d /home/$user_name/.config/MangoHud ]
+if [ ! -f /home/$user_name/.config/MangoHud/MangoHud.conf ]
 then
     echo "Copy MangoHud.conf."
     sudo -u $user_name mkdir /home/$user_name/.config/MangoHud
