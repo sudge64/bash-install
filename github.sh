@@ -33,5 +33,9 @@ then
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/$user_name/.zsh/powerlevel10k
 fi
 
-echo "Touch zshhistory"
-touch "/home/$user_name/.cache/zshhistory"
+
+if [ ! -f /home/$user_name/.cache/zshhistory ]
+then
+    echo "Touch zshhistory"
+    touch "/home/$user_name/.cache/zshhistory"
+fi
