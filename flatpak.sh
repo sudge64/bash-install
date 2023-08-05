@@ -21,7 +21,7 @@ fi
 
 
 echo "Installing Funtimes Flatpaks."
-flatpak install -y net.davidotek.pupgui2 org.libretro.RetroArch org.DolphinEmu.dolphin-emu org.citra_emu.citra org.yuzu_emu.yuzu net.pcsx2.PCSX2 net.rpcs3.RPCS3
+flatpak install -y net.davidotek.pupgui2 org.libretro.RetroArch org.DolphinEmu.dolphin-emu org.citra_emu.citra org.yuzu_emu.yuzu net.pcsx2.PCSX2 net.rpcs3.RPCS3 net.lutris.Lutris
 
 echo "Installing CAD Flatpaks."
 flatpak install -y com.ultimaker.cura org.freecadweb.FreeCAD org.kicad.KiCad org.openscad.OpenSCAD
