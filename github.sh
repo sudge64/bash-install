@@ -34,8 +34,8 @@ then
 fi
 
 
-if [ ! -f /home/$user_name/.cache/zshhistory ]
-then
-    echo "Touch zshhistory"
-    touch "/home/$user_name/.cache/zshhistory"
-fi
+# if [ ! -f /home/$user_name/.cache/zshhistory ]
+# then
+    # echo "Touch zshhistory"
+    # touch "/home/$user_name/.cache/zshhistory"
+# fi
