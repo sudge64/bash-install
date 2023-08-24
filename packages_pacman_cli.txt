@@ -1,1 +1,1 @@
-htop cmatrix neofetch python3-psutil python3-pip zsh dbus-x11 cifs-utils rpcbind nfs-common
+htop cmatrix neofetch python3-psutil python3-pip zsh dbus-x11 cifs-utils rpcbind nfs-common neovim
