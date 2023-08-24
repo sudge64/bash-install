@@ -12,4 +12,4 @@ echo "Install graphical packages."
 pacman -S $(cat packages_graphical.txt) -y
 
 echo "Install dependencies for Neovim."
-pacman -S python3.10-venv ninja-build gettext libtool libtool-bin cmake g++ pkg-config unzip curl doxygen -y
+pacman -S base-devel cmake unzip ninja curl -y
