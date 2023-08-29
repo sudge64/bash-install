@@ -28,7 +28,7 @@ echo "3.) Exit"
 read choice;
 
 case $choice in
-    1) echo "You have chosen Desktop. Flatpaks will be installed.";;
+    1) echo "You have chosen Desktop. Flatpaks will be installed. (Not on macOS)";;
     2) echo "You have chosen Server. Flatpaks will not be installed.";;
     3) echo "Exiting Program."
         exit 0;;
@@ -93,7 +93,6 @@ then
     check_choice
 elif echo $(sw_vers -productName) | grep "macOS"
 then
-    echo "Flatpaks will not be installed on macOS."
     package_manager="brew"
     source ./macintosh.sh
 else
