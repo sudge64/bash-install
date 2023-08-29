@@ -21,7 +21,7 @@ echo "Install Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 echo "Install brew packages."
-brew install $(cat packages_brew.txt) -y
+brew bundle install
 
 echo "REMEMBER"
 echo "1.) Open Terminal
