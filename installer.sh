@@ -93,6 +93,7 @@ then
     check_choice
 elif echo $(sw_vers -productName) | grep "macOS"
 then
+    echo "Flatpaks will not be installed on macOS."
     package_manager="brew"
     source ./macintosh.sh
 else
