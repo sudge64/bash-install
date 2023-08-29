@@ -91,6 +91,10 @@ then
         source ./arch.sh
     fi
     check_choice
+elif echo $(sw_vers -productName) | grep "macOS"
+then
+    package_manager="brew"
+    source ./macintosh.sh
 else
     echo "OS not identified."
 fi
