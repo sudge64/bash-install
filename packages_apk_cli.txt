@@ -1,1 +1,1 @@
-htop btop cmatrix neofetch fastfetch zsh cifs-utils neovim shadow
+htop btop cmatrix neofetch fastfetch zsh cifs-utils neovim shadow tmux

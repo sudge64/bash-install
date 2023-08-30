@@ -1,1 +1,1 @@
-htop btop cmatrix neofetch fastfetch python3-psutil python3-pip zsh dbus-x11 cifs-utils rpcbind neovim util-linux-user java-17-openjdk
+htop btop cmatrix neofetch fastfetch python3-psutil python3-pip zsh dbus-x11 cifs-utils rpcbind neovim util-linux-user java-17-openjdk tmux
