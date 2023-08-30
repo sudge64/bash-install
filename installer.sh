@@ -78,7 +78,12 @@ then
     then
         sudo dconf load / < ./files/settings.dconf
     fi
-    source ./debian.sh
+    if grep -q "openmediavault" $hostname
+    then
+        source ./omv.sh
+    else
+        source ./debian.sh
+    fi
     check_choice
 elif grep -q "Arch" $release_file
 then
