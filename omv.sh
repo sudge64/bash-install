@@ -9,4 +9,4 @@ echo "Install cli packages."
 apt install $(cat packages_apt_cli.txt) -y
 
 echo "Install 'The Assistant'"
-pip3-install yt-dlp
+pip3 install yt-dlp
