@@ -56,12 +56,18 @@ fi
 
 if [ ! -d /home/$user_name/.zsh/powerlevel10k ]
 then
-    echo "Install powerlevel10k"
+    echo "install powerlevel10k"
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/$user_name/.zsh/powerlevel10k
 fi
 
-# if [ ! -f /home/$user_name/.cache/zshhistory ]
-# then
-    # echo "Touch zshhistory"
-    # touch "/home/$user_name/.cache/zshhistory"
-# fi
+if [ ! -d /home/$user_name/.cache/ ]
+then
+    echo "Make directory .cache"
+    mkdir /home/$user_name/.cache
+fi
+
+if [ ! -f /home/$user_name/.cache/zshhistory ]
+then
+    echo "Touch zshhistory"
+    touch "/home/$user_name/.cache/zshhistory"
+fi
