@@ -13,7 +13,7 @@ flatpak install -y $(cat packages/flatpak_everyday.txt)
 if grep -q "Nobara" $release_file
 then
     echo "Installing Sound & Video Flatpaks."
-    flatpak install -y org.audacityteam.Audacity org.freac.freac org.gimp.GIMP org.inkscape.Inkscape fr.handbrake.ghb com.obsproject.Studio com.orama_interactive.Pixelorama org.kde.krita
+    flatpak install -y $(cat packages/flatpak_sound_and_video.txt)
 else
     echo "Installing Sound & Video Flatpaks."
     flatpak install -y org.blender.Blender org.audacityteam.Audacity org.freac.freac org.gimp.GIMP org.inkscape.Inkscape fr.handbrake.ghb com.obsproject.Studio com.orama_interactive.Pixelorama org.kde.krita
