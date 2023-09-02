@@ -62,7 +62,7 @@ then
     then
         sudo dconf load / < ./files/nobara.dconf
     fi
-    source ./fedora.sh
+    source ./fedora.sh -c $choice
     check_choice
 elif grep -q "Alpine"
 then
