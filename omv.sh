@@ -6,7 +6,7 @@
 # https://github.com/sudge64
 
 echo "Install cli packages."
-apt install $(cat packages_apt_cli.txt) -y
+apt install $(cat packages/apt_cli.txt) -y
 
 echo "Install 'The Assistant'"
 pip3 install yt-dlp
