@@ -1,5 +1,5 @@
 # bash-install
- A collection of bash scripts to setup my Linux installations just as I prefer them. This project can be considered a sequel/replacement for my `ansible_configuration` repo.
+ A collection of bash scripts to setup my Linux installations just as I prefer them. This project can be considered a sequel/replacement for my [`ansible_configuration`](https://github.com/sudge64/ansible_configuration) repo.
 
 ## Behind the Curtain
 
