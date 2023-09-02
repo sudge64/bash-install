@@ -14,9 +14,10 @@ if grep -q "Nobara" $release_file
 then
     echo "Installing Sound & Video Flatpaks."
     flatpak install -y $(cat packages/flatpak_sound_and_video.txt)
+    flatpak uninstall org.blender.Blender -y
 else
     echo "Installing Sound & Video Flatpaks."
-    flatpak install -y org.blender.Blender org.audacityteam.Audacity org.freac.freac org.gimp.GIMP org.inkscape.Inkscape fr.handbrake.ghb com.obsproject.Studio com.orama_interactive.Pixelorama org.kde.krita
+    flatpak install -y $(cat packages/flatpak_sound_and_video.txt)
 fi
 
 
@@ -24,4 +25,4 @@ echo "Installing Funtimes Flatpaks."
 flatpak install -y $(cat packages/flatpak_funtimes.txt)
 
 echo "Installing CAD Flatpaks."
-flatpak install -y com.ultimaker.cura org.freecadweb.FreeCAD org.kicad.KiCad org.openscad.OpenSCAD
+flatpak install -y $(cat packages/flatpak_cad.txt)
