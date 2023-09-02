@@ -15,21 +15,6 @@ done
 
 echo "Non sudo user name : $user_name"
 
-if [ ! -d /home/$user_name/.local/share/fonts ]
-then
-    echo "Make /home/$user_name/.local/share/fonts"
-    sudo -u $user_name mkdir /home/$user_name/.local/share/fonts
-fi
-
-if [ ! -f /home/$user_name/.local/share/fonts/Meslo* ]
-then
-    echo "Download Meslo Nerd Font"
-    sudo -u $user_name wget -P /home/$user_name/.local/share/fonts/ "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip"
-    echo "Unzip Meslo Nerd Font"
-    sudo -u $user_name unzip /home/$user_name/.local/share/fonts/Meslo.zip -d /home/$user_name/.local/share/fonts/
-    sudo -u $user_name rm /home/$user_name/.local/share/fonts/Meslo.zip
-fi
-
 if [ ! -f /home/$user_name/.config/nvim/init.lua ]
 then
     echo "Copy init.lua."
@@ -49,17 +34,5 @@ then
     echo "Copy MangoHud.conf."
     sudo -u $user_name mkdir /home/$user_name/.config/MangoHud
     sudo -u $user_name cp ./files/MangoHud.conf /home/$user_name/.config/MangoHud/
-fi
-
-if [ ! -f /home/$user_name/.p10k.zsh ]
-then
-    echo "Copy .p10k.zsh."
-    sudo -u $user_name cp ./files/.p10k.zsh /home/$user_name/
-fi
-
-if [ ! -f /home/$user_name/.zshrc ]
-then
-    echo "Copy .zshrc."
-    sudo -u $user_name cp ./files/.zshrc /home/$user_name/
 fi
 
