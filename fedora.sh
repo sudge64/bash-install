@@ -5,6 +5,26 @@
 # https://cj-wade.com
 # https://github.com/sudge64
 
+while getopts ":c:" option; do
+    case $option in
+        c) choice=$OPTARG;;
+        *) echo "Invalid Option"
+            exit;;
+    esac
+done
+
+function server_install(){
+    echo "Install CLI packages"
+    dnf install $(cat packages/dnf_cli.txt) -y
+
+    echo "Group Install Development Tools and Libraries"
+    dnf groupinstall "Development Tools" "Development Libraries" -y
+    echo "Group Install Virtualization"
+    dnf groupinstall "Virtualization" -y
+    echo "Group Install C Development Tools and Libraries"
+    dnf groupinstall "C Development Tools and Libraries" -y
+}
+
 if [ ! $(rpm -qa | grep -i rpmfusion) ]
 then
     echo "Enable RPM Fusion Free and Non-Free Repos."
@@ -15,14 +35,16 @@ fi
 echo "Add Flathub repo"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-echo "Install CLI packages"
-dnf install $(cat packages/dnf_cli.txt) -y
-echo "Install Graphical packages"
-dnf install $(cat packages/dnf_graphical.txt) -y
 
-echo "Group Install Development Tools and Libraries"
-dnf groupinstall "Development Tools" "Development Libraries" -y
-echo "Group Install Virtualization"
-dnf groupinstall "Virtualization" -y
-echo "Group Install C Development Tools and Libraries"
-dnf groupinstall "C Development Tools and Libraries" -y
+if [ $choice -eq 1 ]
+then
+    server_install
+elif [ $choice -eq 2 ]
+then 
+    server_install
+    echo "Install Graphical packages"
+    dnf install $(cat packages/dnf_graphical.txt) -y
+
+else
+    echo "invalid choice?"
+fi
