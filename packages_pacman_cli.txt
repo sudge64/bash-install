@@ -1,1 +1,0 @@
-htop btop cmatrix neofetch python-pipx zsh cifs-utils rpcbind neovim tmux wget networkmanager
