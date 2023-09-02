@@ -30,17 +30,17 @@ brew bundle install
 echo "REMEMBER"
 echo "1.) Open Terminal
 
-2.) Type “ping ocsp.apple.com”, it should say something like “64 bytes received”… yada yada yada. This is the address of the server that Apple uses to collect your app data.
+2.) Type $(ping ocsp.apple.com), it should say something like $(64 bytes received)... yada yada yada. This is the address of the server that Apple uses to collect your app data.
 
 3.) Press control+C to quit that back and forth.
 
-4.) type “sudo nano /etc/hosts”
+4.) type $(sudo nano /etc/hosts)
 
 5.) type in your password, it will be blank, but your password is being entered.
 
 6.) Use the Arrow Keys to go to the bottom of the file.
 
-7.) Type ”0.0.0.0		ocsp.apple.com”
+7.) Type $(0.0.0.0		ocsp.apple.com)
 
 8.) Press Control + O
 
@@ -48,4 +48,4 @@ echo "1.) Open Terminal
 
 10.) Press Control + X
 
-11.) OPTIONAL: Type “ping ocsp.apple.com”, it should now comeback with something like “request timeout”. This shows that your Mac and Apple’s data collection server can not connect."
+11.) OPTIONAL: Type $(ping ocsp.apple.com), it should now comeback with something like $(request timeout). This shows that your Mac and Apple’s data collection server can not connect."
