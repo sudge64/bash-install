@@ -25,7 +25,7 @@ echo "1.) Desktop"
 echo "2.) Server"
 echo "3.) Exit"
 
-read choice;
+read -r choice;
 
 case $choice in
     1) echo "You have chosen Desktop. Flatpaks will be installed. (Not on macOS)";;
