@@ -1,0 +1,1 @@
+md.obsidian.Obsidian com.usebottles.bottles com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager org.godotengine.Godot org.mozilla.Thunderbird

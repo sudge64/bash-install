@@ -8,7 +8,7 @@
 release_file=/etc/os-release
 
 echo "Installing Everyday Flatpaks."
-flatpak install -y md.obsidian.Obsidian com.usebottles.bottles com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager org.godotengine.Godot org.mozilla.Thunderbird
+flatpak install -y $(cat packages/flatpak_everyday.txt)
 
 if grep -q "Nobara" $release_file
 then
