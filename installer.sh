@@ -43,9 +43,9 @@ function check_choice(){
         source ./flatpak.sh
     elif [ $choice -eq 2 ]
     then 
-        echo "Servers do not typically need flatpaks."
+        echo "servers do not typically need flatpaks."
     else
-        echo "Invalid choice?"
+        echo "invalid choice?"
     fi
 }
 
@@ -82,7 +82,8 @@ then
     then
         source ./omv.sh
     else
-        source ./debian.sh
+        source ./debian.sh -c $choice
+
     fi
     check_choice
 elif grep -q "Arch" $release_file
@@ -93,7 +94,8 @@ then
     then
         source ./steamdeck.sh
     else
-        source ./arch.sh
+        source ./arch.sh -c $choice
+
     fi
     check_choice
 elif echo $(sw_vers -productName) | grep "macOS"
