@@ -57,7 +57,7 @@ source ./zsh-setup.sh -u $SUDO_USER
 if grep -q "Fedora" $release_file || grep -q "Nobara" $release_file
 then
     package_manager="dnf"
-    $package_manager upgrade
+    $package_manager upgrade && $package_manager install wget -y
     if grep -q "Nobara" $release_file
     then
         sudo dconf load / < ./files/nobara.dconf
@@ -67,13 +67,13 @@ then
 elif grep -q "Alpine"
 then
     package_manager="apk"
-    $package_manager update && $package_manager upgrade
+    $package_manager update && $package_manager upgrade && $package_manager add wget -y
     source ./alpine.sh
     check_choice
 elif grep -q "Debian" $release_file || grep -q "Ubuntu" $release_file || grep -q "Pop!_OS" $release_file
 then
     package_manager="apt"
-    $package_manager update && $package_manager upgrade
+    $package_manager update && $package_manager upgrade && $package_manager install wget -y
     if grep -q "Pop" $release_file
     then
         sudo dconf load / < ./files/settings.dconf
@@ -88,7 +88,7 @@ then
 elif grep -q "Arch" $release_file
 then
     package_manager="pacman"
-    $package_manager -Syu
+    $package_manager -Syu && $package_manager -S wget -y
     if grep -q "steamdeck" $hostname
     then
         source ./steamdeck.sh
