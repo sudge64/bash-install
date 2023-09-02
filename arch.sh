@@ -18,7 +18,7 @@ function server_install(){
     pacman -S $(cat packages/pacman_cli.txt) -y
 
     echo "Install dependencies for Neovim."
-    pacman -S base-devel cmake unzip ninja curl -y       echo "Install cli packages."
+    pacman -S base-devel cmake unzip ninja curl -y
 }
 
 if [ $choice -eq 1 ]
