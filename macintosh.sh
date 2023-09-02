@@ -17,8 +17,12 @@ killall Dock
 echo "Show path in Finder"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-echo "Install Homebrew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+if [ ! -f /opt/homebrew/bin/brew ]
+then 
+    echo "Install Homebrew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 echo "Install brew packages."
 brew bundle install
