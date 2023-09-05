@@ -56,7 +56,7 @@ then
     dnf upgrade && dnf install wget -y
     if grep -q "Nobara" $release_file
     then
-        sudo dconf load / < ./files/nobara.dconf
+        dconf load / < ./files/nobara.dconf
     fi
     source ./fedora.sh -c $choice
     check_choice
