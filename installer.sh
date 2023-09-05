@@ -64,7 +64,7 @@ then
     fi
     source ./fedora.sh -c $choice
     check_choice
-elif grep -q "Alpine"
+elif grep -q "Alpine" $release_file
 then
     package_manager="apk"
     $package_manager update && $package_manager upgrade && $package_manager add wget -y
