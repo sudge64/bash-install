@@ -9,9 +9,6 @@
 release_file=/etc/os-release
 hostname=/proc/sys/kernel/hostname
 
-# Set with some variable to avoid garbage.
-package_manager="empty"
-
 # Check if script is being ran with root.
 if [ $(id -u) -ne 0 ]
 then
@@ -56,8 +53,7 @@ source ./zsh-setup.sh -u $SUDO_USER
 # ID's OS, updates packages, and runs the corresponding script.
 if grep -q "Fedora" $release_file || grep -q "Nobara" $release_file
 then
-    package_manager="dnf"
-    $package_manager upgrade && $package_manager install wget -y
+    dnf upgrade && dnf install wget -y
     if grep -q "Nobara" $release_file
     then
         sudo dconf load / < ./files/nobara.dconf
@@ -66,14 +62,12 @@ then
     check_choice
 elif grep -q "Alpine" $release_file
 then
-    package_manager="apk"
-    $package_manager update && $package_manager upgrade && $package_manager add wget
+    apk update && apk upgrade && apk add wget
     source ./alpine.sh
     check_choice
 elif grep -q "Debian" $release_file || grep -q "Ubuntu" $release_file || grep -q "Pop!_OS" $release_file
 then
-    package_manager="apt"
-    $package_manager update && $package_manager upgrade && $package_manager install wget -y
+    apt update && apt upgrade && apt install wget -y
     if grep -q "Pop" $release_file
     then
         sudo dconf load / < ./files/settings.dconf
@@ -88,8 +82,7 @@ then
     check_choice
 elif grep -q "Arch" $release_file
 then
-    package_manager="pacman"
-    $package_manager -Syu && $package_manager -S wget -y
+    pacman -Syu && pacman -S wget -y
     if grep -q "steamdeck" $hostname
     then
         source ./steamdeck.sh
@@ -100,7 +93,6 @@ then
     check_choice
 elif echo $(sw_vers -productName) | grep "macOS"
 then
-    package_manager="brew"
     source ./macintosh.sh
 else
     echo "OS not identified."
