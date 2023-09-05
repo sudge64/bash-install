@@ -67,7 +67,7 @@ then
 elif grep -q "Alpine" $release_file
 then
     package_manager="apk"
-    $package_manager update && $package_manager upgrade && $package_manager add wget -y
+    $package_manager update && $package_manager upgrade && $package_manager add wget
     source ./alpine.sh
     check_choice
 elif grep -q "Debian" $release_file || grep -q "Ubuntu" $release_file || grep -q "Pop!_OS" $release_file
