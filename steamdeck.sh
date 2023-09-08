@@ -7,10 +7,11 @@
 
 echo "Emudeck"
 curl -v https://www.emudeck.com/EmuDeck.desktop -o EmuDeck.desktop
+mv EmuDeck.desktop ~/Desktop
 
 echo "Decky Loader"
-curl -L https://github.com/SteamDeckHomebrew/deck-installer/releases/latest/download/install_release.sh | sh
-mv EmuDeck.desktop ~/Desktop
+curl -v https://github.com/SteamDeckHomebrew/decky-installer/releases/latest/download/decky_installer.desktop -o decky_installer.desktop
+mv decky_installer.desktop ~/Desktop
 
 echo "CryoUtilities"
 curl -v https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/InstallCryoUtilities.desktop -o InstallCryoUtilities.desktop
