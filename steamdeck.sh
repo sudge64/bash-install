@@ -15,3 +15,6 @@ mv EmuDeck.desktop ~/Desktop
 echo "CryoUtilities"
 curl -v https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/InstallCryoUtilities.desktop -o InstallCryoUtilities.desktop
 mv InstallCryoUtilities.desktop ~/Desktop
+
+echo "Install Flatpaks"
+flatpak install $(cat packages/flatpak_steamdeck.txt) -y
