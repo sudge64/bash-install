@@ -25,7 +25,9 @@ then
 fi
 
 echo "Install brew packages."
+cd packages
 brew bundle install
+cd ..
 
 echo "REMEMBER"
 echo "1.) Open Terminal
