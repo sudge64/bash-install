@@ -63,11 +63,9 @@ vim.opt.rtp:prepend(lazypath)
 --
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
+
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
-
-  -- Custom addition, catppuccin colorscheme
-  { "catppuccin//nvim", name = "catppuccin", priority = 1000},
 
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -115,13 +113,13 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
+--  { -- Theme inspired by Atom
+--    'navarasu/onedark.nvim',
+--    priority = 1000,
+--    config = function()
+--      vim.cmd.colorscheme 'onedark'
+--    end,
+--  },
 
   { -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -175,6 +173,15 @@ require('lazy').setup({
     end,
   },
 
+  -- Custom addition, catppuccin color scheme
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "iamcco/markdown-preview.nvim",
+    config = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
+
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -195,14 +202,14 @@ require('lazy').setup({
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
+-- Custom addition, catppuccin
+vim.cmd.colorscheme "catppuccin-macchiato"
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
 -- Make line numbers default
 vim.wo.number = true
-
--- Custom addition, catppuccin colorscheme
-vim.cmd.colorscheme "catppuccin-macchiato"
 
 -- Custom addition, relative line numbers
 vim.wo.relativenumber = true
@@ -510,3 +517,4 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
