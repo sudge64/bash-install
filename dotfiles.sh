@@ -20,6 +20,7 @@ then
     echo "Copy init.lua."
     sudo -u $user_name mkdir /home/$user_name/.config/nvim
     sudo -u $user_name cp ./files/init.lua /home/$user_name/.config/nvim/
+    sudo -u $user_name cp ./files/lazy-lock.json /home/$user_name/.config/nvim/
 fi
 
 if [ ! -f /home/$user_name/.config/kitty/kitty.conf ]
