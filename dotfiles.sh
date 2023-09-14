@@ -28,7 +28,7 @@ then
     echo "Set up tmux"
     sudo -u $user_name mkdir /home/$user_name/.config/tmux
     sudo -u $user_name cp ./files/tmux.conf /home/$user_name/.config/tmux/
-    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+    git clone https://github.com/tmux-plugins/tpm /home/$user_name/.config/tmux/plugins/tpm
 fi
 
 if [ ! -f /home/$user_name/.config/kitty/kitty.conf ]
