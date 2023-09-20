@@ -25,6 +25,7 @@ alias ll="ls -l"
 alias la="ls -a"
 alias ld="ls -ld"
 alias nv="nvim"
+alias t="tmux"
 export PATH="$HOME/.poetry/bin:$PATH"
 export TERM=xterm-256color
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
