@@ -7,3 +7,7 @@
 
 echo "Install CLI packages"
 apk add $(cat packages/apk_cli.txt)
+echo "Install pipx"
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+

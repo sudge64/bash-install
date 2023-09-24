@@ -10,3 +10,7 @@ apt install $(cat packages/apt_cli.txt) -y
 
 echo "Install 'The Assistant'"
 pip3 install yt-dlp
+echo "Install pipx"
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+

@@ -32,6 +32,9 @@ then
     server_install
     echo "Install graphical packages."
     apt install $(cat packages/apt_graphical.txt) -y
+    echo "Install pipx"
+    python3 -m pip install --user pipx
+    python3 -m pipx ensurepath
 else
     echo "invalid choice?"
 fi
