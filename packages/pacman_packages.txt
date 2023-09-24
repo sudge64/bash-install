@@ -1,1 +1,1 @@
-htop btop cmatrix neofetch python-pipx zsh cifs-utils rpcbind neovim tmux networkmanager ffmpeg
+htop btop cmatrix neofetch python-pipx zsh cifs-utils rpcbind neovim tmux networkmanager ffmpeg pandoc-cli
