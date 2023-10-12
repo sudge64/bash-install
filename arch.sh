@@ -28,7 +28,7 @@ elif [ $choice -eq 2 ]
 then 
     server_install
     echo "Install graphical packages."
-    apt install $(cat packages/apt_graphical.txt) -y
+    pacman -S $(cat packages/pacman_graphical.txt)
 else
     echo "invalid choice?"
 fi
