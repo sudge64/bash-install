@@ -15,10 +15,10 @@ done
 
 function server_install(){
         echo "Install cli packages."
-        apt install $(cat packages/zypper_cli.txt) -y
+        zypper install $(cat packages/zypper_cli.txt) -y
 
         echo "Install dependencies for Neovim."
-        apt install python3-venv ninja-build gettext libtool libtool-bin cmake g++ pkg-config unzip curl doxygen -y
+        zypper install python3-venv ninja-build gettext libtool libtool-bin cmake g++ pkg-config unzip curl doxygen -y
 
         echo "Install Neovim from Github."
         git clone https://github.com/neovim/neovim
