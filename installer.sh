@@ -94,6 +94,7 @@ then
 elif grep -q "openSUSE" $release_file
 then
     zypper up
+    source ./opensuse.sh
 elif echo $(sw_vers -productName) | grep "macOS"
 then
     source ./macintosh.sh
