@@ -21,7 +21,7 @@ function server_install(){
         apt install python3-venv ninja-build gettext libtool libtool-bin cmake g++ pkg-config unzip curl doxygen -y
 
         echo "Install Neovim from Github."
-        git clone https://github.com/neovim/neovim
+        git clone https://github.com/neovim/neovim ../neovim
 }
 
 if [ $choice -eq 1 ]
