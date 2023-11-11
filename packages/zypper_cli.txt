@@ -1,1 +1,1 @@
-htop btop cmatrix neofetch python3-psutil python3-pip zsh cifs-utils rpcbind yast2-nfs-common tmux ffmpeg pandoc texlive wkhtmltopdf devel_basis
+htop btop cmatrix neofetch python3-psutil python3-pip zsh cifs-utils rpcbind yast2-nfs-common tmux ffmpeg pandoc texlive wkhtmltopdf devel_basis rofi
