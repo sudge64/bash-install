@@ -20,3 +20,15 @@ First, you must clone the repository. Change into the repo directory. Change the
 3. `chmod a+x *.sh`
 4. `sudo ./installer.sh`
 
+## Notes
+
+This one is more for my personal usecase.
+
+If `Lazy` refuses to install the plugins to `$home/.local/share/nvim/lazy`, then `rm -rf *` on everything in said directory.
+
+You should be able to open `nvim` again and it will re-downloadthe plugins.
+
+You may have to run `git config --global --add safe.directory /home/cjwade/.local/share/nvim/lazy/*directory_name*` first.
+
+This is really for users who have their `/home` on a different partition or physical device.
+
