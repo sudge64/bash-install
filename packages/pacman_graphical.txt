@@ -1,1 +1,1 @@
-kitty syncthing steam stacer gnome-tweaks vlc flameshot
+kitty syncthing steam gnome-tweaks vlc flameshot
