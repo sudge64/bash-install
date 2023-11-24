@@ -80,7 +80,7 @@ then
 
     fi
     check_choice
-elif grep -q "Arch" $release_file
+elif grep -q "Arch" $release_file || grep -q "Artix" $release_file
 then
     pacman -Syu && pacman -S wget -y
     if grep -q "steamdeck" $hostname
