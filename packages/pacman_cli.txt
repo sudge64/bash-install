@@ -1,1 +1,1 @@
-htop btop cmatrix neofetch zsh python-pipx nfs-utils cifs-utils rpcbind neovim tmux networkmanager ffmpeg pandoc-cli texlive-latex texlive-binextra rofi
+htop btop neofetch zsh python-pipx nfs-utils cifs-utils rpcbind neovim tmux networkmanager ffmpeg pandoc texlive-latex texlive-binextra rofi
