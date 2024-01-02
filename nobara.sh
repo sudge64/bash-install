@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Authored by C.J. Wade
-# 06/27/23
+# 01/02/24
 # https://cj-wade.com
 # https://github.com/sudge64
 
@@ -17,12 +17,12 @@ function server_install(){
     echo "Install CLI packages"
     dnf install $(cat packages/dnf_cli.txt) -y
 
-    echo "Group Install Development Tools and Libraries"
-    dnf group install "Development Tools" "Development Libraries" -y
-    echo "Group Install Virtualization"
-    dnf group install "Virtualization" -y
     echo "Group Install C Development Tools and Libraries"
-    dnf group install "C Development Tools and Libraries" -y
+    dnf group install "c-development" -y
+    echo "Install Virtualization"
+    dnf install $(cat packages/nobara_virt.txt) -y
+    echo "Group Install Development Tools"
+    dnf group install "development-tools" -y
 }
 
 if [ ! $(rpm -qa | grep -i rpmfusion) ]

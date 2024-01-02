@@ -51,14 +51,16 @@ source ./zsh-setup.sh -u $SUDO_USER
 
 # Main if-else block,
 # ID's OS, updates packages, and runs the corresponding script.
-if grep -q "Fedora" $release_file || grep -q "Nobara" $release_file || grep -q "Amazon" $release_file
+if grep -q "Fedora" $release_file || grep -q "Amazon" $release_file
 then
     dnf upgrade && dnf install wget -y
-    if grep -q "Nobara" $release_file
-    then
-        dconf load / < ./files/nobara.dconf
-    fi
     source ./fedora.sh -c $choice
+    check_choice
+elif grep -q "Nobara" $release_file
+then
+    dnf upgrade && dnf install wget -y
+    dconf load / < ./files/nobara.dconf
+    source ./nobara.sh -c $choice
     check_choice
 elif grep -q "Alpine" $release_file
 then
