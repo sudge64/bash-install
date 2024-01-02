@@ -60,7 +60,7 @@ elif grep -q "Nobara" $release_file
 then
     dnf upgrade && dnf install wget -y
     dconf load / < ./files/nobara.dconf
-    source ./nobara.sh -c $choice -u $user_name
+    source ./nobara.sh -c $choice
     check_choice
 elif grep -q "Alpine" $release_file
 then

@@ -5,9 +5,10 @@
 # https://cj-wade.com
 # https://github.com/sudge64
 
-while getopts ":c:" option; do
+while getopts ":c:u:" option; do
     case $option in
         c) choice=$OPTARG;;
+        u) user_name=$OPTARG;;
         *) echo "Invalid Option"
             exit;;
     esac
@@ -19,10 +20,21 @@ function server_install(){
 
     echo "Group Install C Development Tools and Libraries"
     dnf group install "c-development" -y
-    echo "Install Virtualization"
-    dnf install $(cat packages/nobara_virt.txt) -y
     echo "Group Install Development Tools"
     dnf group install "development-tools" -y
+    echo "Install Virtualization"
+    dnf install $(cat packages/nobara_virt.txt) -y
+    systemctl enable libvirtd.service
+    virsh net-start default
+    virsh net-autostart default
+    virsh net-list --all
+    usermod -aG libvirt user_name
+    usermod -aG libvirt-qemu user_name
+    usermod -aG kvm user_name
+    usermod -aG input user_name
+    usermod -aG disk user_name
+
+
 }
 
 if [ ! $(rpm -qa | grep -i rpmfusion) ]
