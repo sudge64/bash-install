@@ -1,1 +1,1 @@
-htop btop cmatrix neofetch python3-psutil python3-pip zsh dbus-x11 cifs-utils rpcbind neovim util-linux-user java-17-openjdk tmux ffmpeg pandoc texlive wkhtmltopdf rofi
+htop btop cmatrix neofetch python3-psutil python3-pip zsh dbus-x11 cifs-utils rpcbind neovim util-linux-user java-17-openjdk tmux pandoc texlive wkhtmltopdf rofi

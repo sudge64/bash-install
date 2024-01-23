@@ -38,7 +38,14 @@ then
     sudo -u $user_name cp ./files/kitty.conf /home/$user_name/.config/kitty/
 fi
 
-if [ ! -f /home/$user_name/.config/rofi/config.rasi ]
+if [ ! -f /home/$user_name/.config/MangoHud/MangoHud.conf ]
+then
+    echo "Set up MangoHud"
+    sudo -u $user_name mkdir /home/$user_name/.config/MangoHud
+    sudo -u $user_name cp ./files/MangoHud.conf /home/$user_name/.config/MangoHud/
+fi
+
+if [ ! -f /home/$user_name/.config/rofi/config.rasi && ! -d /home/$user_name/.github/rofi ]
 then
     echo "Set up rofi"
     git clone https://github.com/catppuccin/rofi ../rofi
@@ -47,10 +54,19 @@ then
     cd ../../bash-install
     sudo -u $user_name cp ./files/config.rasi /home/$user_name/.config/rofi/
 fi
-if [ ! -f /home/$user_name/.config/MangoHud/MangoHud.conf ]
+
+if [ ! -d /home/$user_name/.config/waybar/ ]
 then
-    echo "Set up MangoHud"
-    sudo -u $user_name mkdir /home/$user_name/.config/MangoHud
-    sudo -u $user_name cp ./files/MangoHud.conf /home/$user_name/.config/MangoHud/
+    echo "Set up waybar"
+    sudo -u $user_name mkdir /home/$user_name/.config/waybar
+    sudo -u $user_name cp ./files/config.jsonc /home/$user_name/.config/waybar/config.jsonc
+    sudo -u $user_name cp ./files/style.css /home/$user_name/.config/waybar/style.css
+fi
+
+if [ ! -d /home/$user_name/.config/hypr/ ]
+then
+    echo "Set up hyprland"
+    sudo -u $user_name mkdir /home/$user_name/.config/hyprland.conf
+    sudo -u $user_name cp ./files/hyprland.conf /home/$user_name/.config/hypr/hyprland.conf
 fi
 

@@ -85,11 +85,27 @@ then
 elif grep -q "Arch" $release_file || grep -q "Artix" $release_file
 then
     pacman -Syu && pacman -S wget -y
+
+    # Controls the amounts of packages to be installed
+    echo "Do you wish to install Hyprland?"
+    echo "1.) Yes"
+    echo "2.) No"
+
+    read -r choice_hyprland;
+
+    case $choice_hyprland in
+        1) echo "Installing Hyprland"
+        2) echo "Not Installing Hyprland"
+            exit 0;;
+        *) echo "Invalid choice."
+            exit 0;;
+    esac
+
     if grep -q "steamdeck" $hostname
     then
         source ./steamdeck.sh
     else
-        source ./arch.sh -c $choice
+        source ./arch.sh -c $choice -h $choice_hyprland
 
     fi
     check_choice
