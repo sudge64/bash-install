@@ -59,7 +59,6 @@ then
 elif grep -q "Nobara" $release_file
 then
     dnf upgrade && dnf install wget -y
-    dconf load / < ./files/nobara.dconf
     source ./nobara.sh -c $choice -u $user_name
     check_choice
 elif grep -q "Alpine" $release_file
@@ -70,10 +69,6 @@ then
 elif grep -q "Debian" $release_file || grep -q "Ubuntu" $release_file || grep -q "Pop!_OS" $release_file
 then
     apt update && apt upgrade && apt install wget -y
-    if grep -q "Pop" $release_file
-    then
-        sudo dconf load / < ./files/settings.dconf
-    fi
     if grep -q "openmediavault" $hostname
     then
         source ./omv.sh
