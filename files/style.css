@@ -17,15 +17,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
 window#waybar.termite {
     background-color: #3F3F3F;
 }
@@ -41,8 +32,8 @@ button {
     /* Avoid rounded borders under each button name */
     /*border: none;*/
     border-radius: 4px;
-    padding: 0 10px;
-    margin: 6 3px;
+    padding: 0px 10px;
+    margin: 6px 3px;
 
 }
 
@@ -53,7 +44,7 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px 5px;
     background-color: #64727D;
     color: #ffffff;
 }
@@ -97,8 +88,8 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
-    margin: 6 3px;
+    padding: 0px 10px;
+    margin: 6px 3px;
     color: #ffffff;
 }
 
@@ -109,12 +100,12 @@ button:hover {
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+    margin-left: 0px;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+    margin-right: 0px;
 }
 
 #clock {
@@ -149,8 +140,7 @@ button:hover {
 }
 
 label:focus {
-    /* background-color: #000000; */
-    background-color: #64727D;
+    background-color: #000000;
 }
 
 #cpu {
@@ -254,13 +244,13 @@ label:focus {
 
 #keyboard-state {
     background: #97e1ad;
-    padding: 0 0px;
-    margin: 0 5px;
+    padding: 0px 0px;
+    margin: 0px 5px;
     min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+    padding: 0px 5px;
 }
 
 #keyboard-state > label.locked {
