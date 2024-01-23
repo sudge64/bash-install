@@ -38,6 +38,7 @@ if [ $choice_hyprland -eq 1]
 then
     echo "Installing Hyprland"
     pacman -S $(cat packages/hyprland.txt) --noconfirm
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 else
     echo "invalid choice?"
 fi
