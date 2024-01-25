@@ -59,7 +59,7 @@ then
 elif grep -q "Nobara" $release_file
 then
     dnf upgrade && dnf install wget -y
-    source ./nobara.sh -c $choice -u $user_name
+    source ./nobara.sh -c $choice -u $SUDO_USER
     check_choice
 elif grep -q "Alpine" $release_file
 then
@@ -89,9 +89,8 @@ then
     read -r choice_hyprland;
 
     case $choice_hyprland in
-        1) echo "Installing Hyprland"
-        2) echo "Not Installing Hyprland"
-            exit 0;;
+        1) echo "Installing Hyprland";;
+        2) echo "Not Installing Hyprland";;
         *) echo "Invalid choice."
             exit 0;;
     esac
@@ -100,7 +99,7 @@ then
     then
         source ./steamdeck.sh
     else
-        source ./arch.sh -c $choice -h $choice_hyprland
+        source ./arch.sh -c $choice -h $choice_hyprland -u $SUDO_USER
 
     fi
     check_choice

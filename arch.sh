@@ -5,10 +5,11 @@
 # https://cj-wade.com
 # https://github.com/sudge64
 
-while getopts ":c:h" option; do
+while getopts ":c:h:u:" option; do
     case $option in
         c) choice=$OPTARG;;
         h) choice_hyprland=$OPTARG;;
+        u) user_name=$OPTARG;;
         *) echo "Invalid Option"
             exit;;
     esac
@@ -20,6 +21,14 @@ function server_install(){
 
     echo "Install dependencies for Neovim."
     pacman -S base-devel cmake unzip ninja curl --noconfirm
+
+    pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+
+    echo 'unix_sock_group = "libvirt"' >> /etc/libvirt/libvirtd.conf
+    echo 'unix_sock_rw_perms = "0770"' >> /etc/libvirt/libvirtd.conf
+
+    usermod -a -G libvirt $user_name
+    newgrp libvirt
 }
 
 if [ $choice -eq 1 ]
@@ -34,12 +43,12 @@ else
     echo "invalid choice?"
 fi
 
-if [ $choice_hyprland -eq 1]
+if [ $choice_hyprland -eq 1 ]
 then
     echo "Installing Hyprland"
     pacman -S $(cat packages/hyprland.txt) --noconfirm
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 else
-    echo "invalid choice?"
+    echo "Not Installing Hyprland"
 fi
 
