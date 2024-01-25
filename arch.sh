@@ -29,6 +29,8 @@ function server_install(){
 
     usermod -a -G libvirt $user_name
     newgrp libvirt
+
+    echo "Remember! sudo systemctl start libvirtd.service"
 }
 
 if [ $choice -eq 1 ]
