@@ -51,6 +51,11 @@ then
     echo "Installing Hyprland"
     pacman -S $(cat packages/hyprland.txt) --noconfirm
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    echo "Installing Paru"
+    git clone https://aur.archlinux.org/paru.git ../paru
+    cd ../paru
+    makepkg -si
+    cd ../bash-install
 else
     echo "Not Installing Hyprland"
 fi
