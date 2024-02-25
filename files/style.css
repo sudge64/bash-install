@@ -87,6 +87,8 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#custom-powerprofilesctl,
+#custom-logout,
 #mpd {
     padding: 0px 10px;
     margin: 6px 3px;
@@ -255,4 +257,16 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
+}
+
+#custom-powerprofilesctl {
+    background-color: #64727D;
+}
+
+#custom-powerprofilesctl.activated {
+    background-color: #ecf0f1;
+    color: #000000;
+}
+#custom-logout {
+    background-color: #64727D;
 }

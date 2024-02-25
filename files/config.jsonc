@@ -15,15 +15,16 @@
         "hyprland/window"
         ],
     "modules-right": [
-        "idle_inhibitor",
         "pulseaudio",
         "network",
         "cpu",
         "memory",
         "temperature",
         "battery",
+        "backlight",
         "clock",
-        "tray"
+        "tray",
+        "custom/logout"
         ],
     
     // Modules configuration
@@ -77,13 +78,15 @@
     "temperature": {
         // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        //"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": [""]
     },
     "backlight": {
-        // "device": "acpi_video1",
+        "device": "acpi_video1",
+        // "device": "amdgpu_bl1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -105,10 +108,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ipaddr} \n{bandwidthDownBits}  {bandwidthUpBits} \n{ifname} via {gwaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}"
+        "format-alt": "{bandwidthDownBits}  {bandwidthUpBits} "
     },
     "pulseaudio": {
         "scroll-step": 1, // %, can be a float
@@ -128,5 +131,20 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/powerprofilesctl": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        "on-click": {
+            "activated": "powerprofilesctl set performance",
+            "deactivated": "powerprofilesctl set power-saver"
+        }
+    },
+    "custom/logout":{
+        "format": "",
+        "on-click": "wlogout"
     }
 }
