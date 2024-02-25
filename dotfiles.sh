@@ -59,8 +59,7 @@ if [ ! -d /home/$user_name/.config/waybar/ ]
 then
     echo "Set up waybar"
     sudo -u $user_name mkdir /home/$user_name/.config/waybar
-    sudo -u $user_name cp ./files/config.jsonc /home/$user_name/.config/waybar/config.jsonc
-    sudo -u $user_name cp ./files/style.css /home/$user_name/.config/waybar/style.css
+    sudo -u $user_name cp -r ./files/waybar /home/$user_name/.config/waybar/
 fi
 
 if [ ! -d /home/$user_name/.config/hypr/ ]
