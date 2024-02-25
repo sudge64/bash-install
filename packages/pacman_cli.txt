@@ -1,1 +1,1 @@
-htop btop neofetch zsh python-pipx nfs-utils cifs-utils rpcbind neovim tmux networkmanager ffmpeg pandoc texlive-latex texlive-binextra rofi brightnessctl network-manager-applet blueman
+htop btop neofetch zsh python-pipx nfs-utils cifs-utils rpcbind neovim tmux networkmanager ffmpeg pandoc texlive-latex texlive-binextra rofi brightnessctl network-manager-applet blueman sbctl
