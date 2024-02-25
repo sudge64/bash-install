@@ -59,7 +59,14 @@ if [ ! -d /home/$user_name/.config/waybar/ ]
 then
     echo "Set up waybar"
     sudo -u $user_name mkdir /home/$user_name/.config/waybar
-    sudo -u $user_name cp -r ./files/waybar /home/$user_name/.config/waybar/
+    sudo -u $user_name cp -r ./files/waybar/* /home/$user_name/.config/waybar/
+fi
+
+if [ ! -d /home/$user_name/.config/wlogout/ ]
+then
+    echo "Set up wlogout"
+    sudo -u $user_name mkdir /home/$user_name/.config/wlogout
+    sudo -u $user_name cp -r ./files/wlogout/* /home/$user_name/.config/wlogout/
 fi
 
 if [ ! -d /home/$user_name/.config/hypr/ ]
