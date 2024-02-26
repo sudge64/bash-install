@@ -5,12 +5,11 @@
 # https://cj-wade.com
 # https://github.com/sudge64
 
-while getopts ":c:h:u:f:" option; do
+while getopts ":c:h:u:" option; do
     case $option in
         c) choice=$OPTARG;;
         h) choice_hyprland=$OPTARG;;
         u) user_name=$OPTARG;;
-        u) choice_framework=$OPTARG;;
         *) echo "Invalid Option"
             exit;;
     esac
@@ -59,12 +58,4 @@ then
     paru -S $(cat packages/paru.txt)
 else
     echo "Not Installing Hyprland"
-fi
-
-if [ $choice_framework -eq 1 ]
-then
-    echo "Installing Framework packages."
-    pacman -S $(cat packages/pacman_framework.txt) --noconfirm
-else
-    echo "Not Installing Framework packages"
 fi

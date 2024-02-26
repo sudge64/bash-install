@@ -95,16 +95,6 @@ then
             exit 0;;
     esac
 
-    read -r choice_framework;
-
-    case $choice_framework in
-        1) echo "Yes";;
-        2) echo "No";;
-        *) echo "Invalid choice."
-            exit 0;;
-    esac
-
-
     if grep -q "steamdeck" $hostname
     then
         source ./steamdeck.sh

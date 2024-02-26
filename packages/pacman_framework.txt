@@ -1,1 +1,1 @@
-brightnessctl power-profiles-daemon
+brightnessctl power-profiles-daemon iio-sensor-proxy
