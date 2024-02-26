@@ -59,3 +59,4 @@ then
 else
     echo "Not Installing Hyprland"
 fi
+pacman -S $(cat packages/pacman_framework.txt) --noconfirm
