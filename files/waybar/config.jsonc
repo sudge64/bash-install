@@ -24,6 +24,7 @@
         "backlight",
         "clock",
         "tray",
+        "custom/rofi",
         "custom/logout"
         ],
     
@@ -146,5 +147,9 @@
     "custom/logout":{
         "format": "",
         "on-click": "wlogout"
+    },
+    "custom/rofi":{
+        "format": "",
+        "on-click": "rofi -show drun"
     }
 }

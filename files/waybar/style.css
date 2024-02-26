@@ -89,6 +89,7 @@ button:hover {
 #scratchpad,
 #custom-powerprofilesctl,
 #custom-logout,
+#custom-rofi,
 #mpd {
     padding: 0px 10px;
     margin: 6px 3px;
@@ -268,5 +269,8 @@ label:focus {
     color: #000000;
 }
 #custom-logout {
+    background-color: #64727D;
+}
+#custom-rofi {
     background-color: #64727D;
 }
