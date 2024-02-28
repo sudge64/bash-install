@@ -42,9 +42,6 @@ P.S. You can delete this when you're done too. It's your config now :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-vim.g.python_host_prog = '"C:\\Program Files\\KiCad\\7.0\\bin\\python.exe"'
-vim.g.python3_host_prog = '"C:\\Program Files\\KiCad\\7.0\\bin\\python.exe"'
-
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
@@ -100,7 +97,7 @@ require('lazy').setup({
 
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
-    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+    dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip', 'rafamadriz/friendly-snippets' },
   },
 
   -- Useful plugin to show you pending keybinds.
@@ -179,7 +176,6 @@ require('lazy').setup({
     end,
   },
   { 'christoomey/vim-tmux-navigator', lazy=false },
-
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -196,7 +192,7 @@ require('lazy').setup({
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
 --  { import = 'custom.plugins' },
 }, {})
-
+require("luasnip.loaders.from_vscode").lazy_load()
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
