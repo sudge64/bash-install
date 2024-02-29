@@ -99,7 +99,7 @@ then
     then
         source ./steamdeck.sh
     else
-        source ./arch.sh -c $choice -h $choice_hyprland -u $SUDO_USER -f $choice_framework
+        source ./arch.sh -c $choice -h $choice_hyprland -u $SUDO_USER
 
     fi
     check_choice
