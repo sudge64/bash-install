@@ -45,7 +45,7 @@ then
     sudo -u $user_name cp ./files/MangoHud.conf /home/$user_name/.config/MangoHud/
 fi
 
-if [ ! -f /home/$user_name/.config/rofi/config.rasi && ! -d /home/$user_name/.github/rofi ]
+if [ ! -f /home/$user_name/.config/rofi/config.rasi ]
 then
     echo "Set up rofi"
     git clone https://github.com/catppuccin/rofi ../rofi
