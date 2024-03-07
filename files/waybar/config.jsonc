@@ -64,9 +64,9 @@
     "clock": {
         "timezone": "America/Chicago",
         "format": "{:%I:%M %p}",
-        "format-alt": "{:%R %p ~ %a %m·%d·%y}",
+        "format-alt": "{:%I:%M %p ~ %a %m·%d·%y}",
         "tooltip": true,
-        "tooltip-format": "<big>{:%m/%d/%y}</big>\n<tt><small>{calendar}</small></tt>"
+        "tooltip-format": "<big>{:%a %m/%d/%y}</big>\n<tt><small>{calendar}</small></tt>"
         // "tooltip-format": "<tt>{calendar}</tt>",
     },
     "cpu": {
