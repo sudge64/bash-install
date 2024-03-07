@@ -1,1 +1,1 @@
-grimblast-git gamescope-nvidia swww wlogout wlr-randr
+grimblast-git swww wlogout wlr-randr

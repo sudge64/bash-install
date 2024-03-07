@@ -1,1 +1,1 @@
-hyprland hyprpaper rofi waybar xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal-hyprland
+hyprland hyprpaper rofi waybar xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal-hyprland gamescope
