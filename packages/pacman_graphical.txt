@@ -1,1 +1,1 @@
-kitty syncthing steam mangohud gnome-tweaks vlc flameshot pavucontrol
+alacritty kitty syncthing steam mangohud gnome-tweaks vlc flameshot pavucontrol

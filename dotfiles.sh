@@ -38,6 +38,15 @@ then
     sudo -u $user_name cp ./files/kitty.conf /home/$user_name/.config/kitty/
 fi
 
+if [ ! -f /home/$user_name/.config/alacritty/alacritty.toml ]
+then
+    echo "Set up alacritty"
+    sudo -u $user_name mkdir /home/$user_name/.config/alacritty
+    curl -LO --output-dir /home/$user_name/.config/alacritty https://github.com/catppuccin/alacritty/raw/main/catppuccin-macchiato.toml
+    sudo -u $user_name cp ./files/alacritty.toml /home/$user_name/.config/alacritty/
+fi
+
+
 if [ ! -f /home/$user_name/.config/MangoHud/MangoHud.conf ]
 then
     echo "Set up MangoHud"
