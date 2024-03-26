@@ -81,7 +81,7 @@ fi
 if [ ! -d /home/$user_name/.config/hypr/ ]
 then
     echo "Set up hyprland"
-    sudo -u $user_name mkdir /home/$user_name/.config/hyprland.conf
-    sudo -u $user_name cp ./files/hyprland.conf /home/$user_name/.config/hypr/hyprland.conf
+    sudo -u $user_name mkdir /home/$user_name/.config/hypr
+    sudo -u $user_name cp -rv ./files/hypr/*.conf /home/$user_name/.config/hypr/
 fi
 
