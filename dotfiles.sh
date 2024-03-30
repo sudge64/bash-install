@@ -85,3 +85,9 @@ then
     sudo -u $user_name cp -rv ./files/hypr/*.conf /home/$user_name/.config/hypr/
 fi
 
+if [ ! -f /home/$user_name/.config/pipewire/pipewire.conf.d/10-focusrite-channels.conf ]
+then
+    echo "Set up neovim"
+    sudo -u $user_name mkdir -p /home/$user_name/.config/pipewire/pipewire.conf.d
+    sudo -u $user_name cp ./files/10-focusrite-channels.conf /home/$user_name/.config/pipewire/pipewire.conf.d
+fi
