@@ -24,7 +24,6 @@
         "backlight",
         "clock",
         "tray",
-        "custom/rofi",
         "custom/logout"
         ],
     
@@ -166,10 +165,5 @@
         "format": "",
         "tooltip-format": "Logout/Shutdown",
         "on-click": "wlogout"
-    },
-    "custom/rofi":{
-        "format": "",
-        "tooltip-format": "Apps",
-        "on-click": "rofi -show drun"
     }
 }
