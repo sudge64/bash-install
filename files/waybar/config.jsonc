@@ -1,66 +1,53 @@
 {
-    "layer": "top", // Waybar at top layer
-    
-    "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 35, // Waybar height (to be removed for auto height)
-    "margin-bottom": 5,
-    
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    
-    // Choose the order of the modules
-    "modules-left": [
-        "hyprland/workspaces" 
-        ],
-    "modules-center": [
-        "hyprland/window"
-        ],
-    "modules-right": [
-        "pulseaudio",
-        // "network",
-        "cpu",
-        "memory",
-        "temperature",
-        "battery",
-        "backlight",
-        "clock",
-        "tray",
-        "custom/logout"
-        ],
-    
-    // Modules configuration
-    "hyprland/workspaces": {
-         "disable-scroll": false,
-         "all-outputs": true,
-         "warp-on-scroll": true,
-         "format": "{name}"
-         // "format": "{name}: {icon}",
-         /*"format-icons": {
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         }*/
-     },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
-        }
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "tray": {
-        // "icon-size": 32,
-        "spacing": 10
-    },
+	"layer": "top",
+	"position": "top",
+        "margin-top": 2,
+
+	"modules-left": [
+		"hyprland/workspaces",
+                "custom/arrow2"
+	],
+
+	"modules-center": [
+		"hyprland/window"
+	],
+
+	"modules-right": [
+		"custom/arrow1",
+		"pulseaudio",
+		"cpu",
+		"memory",
+		"temperature",
+		"battery",
+		"backlight",
+		"clock",
+		"tray"
+	],
+
+	// Modules
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": " {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
     "clock": {
         "timezone": "America/Chicago",
         "format": "{:%I:%M %p}",
@@ -85,8 +72,8 @@
             "on-scroll-up": "shift_up",
             "on-scroll-down": "shift_down"
         }
-        // "tooltip-format": "<tt>{calendar}</tt>",
     },
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": true
@@ -94,52 +81,21 @@
     "memory": {
         "format": "{}% "
     },
-    "temperature": {
-        // "thermal-zone": 2,
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        //"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [""]
-    },
-    "backlight": {
-        "device": "acpi_video1",
-        // "device": "amdgpu_bl1",
-        "format": "{percent}% {icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr} ",
-        "tooltip-format": "{ipaddr} \n{bandwidthDownBits}  {bandwidthUpBits} \n{ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{bandwidthDownBits}  {bandwidthUpBits} "
-    },
+
+    // Modules configuration
+    "hyprland/workspaces": {
+         "disable-scroll": false,
+         "all-outputs": true,
+         "warp-on-scroll": true,
+         "format": "{name}"
+     },
+
     "pulseaudio": {
-        "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "scroll-step": 5, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "{format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format-muted": "",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -151,20 +107,26 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/powerprofilesctl": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "on-click": {
-            "activated": "powerprofilesctl set performance",
-            "deactivated": "powerprofilesctl set power-saver"
-        }
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        //"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [""]
     },
-    "custom/logout":{
-        "format": "",
-        "tooltip-format": "Logout/Shutdown",
-        "on-click": "wlogout"
-    }
+
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
+
+	"custom/arrow1": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/arrow2": {
+		"format": "",
+		"tooltip": false
+	}
 }
