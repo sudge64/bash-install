@@ -189,6 +189,11 @@
 	color: @text;
 }
 
+#backlight{
+	background: @surface2;
+	color: @text;
+}
+
 #custom-arrow1 {
 	color: @surface2;
 	background: @base;
