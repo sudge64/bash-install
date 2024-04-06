@@ -54,6 +54,12 @@ then
     git clone https://github.com/zsh-users/zsh-autosuggestions /home/$user_name/.zsh/zsh-autosuggestions
 fi
 
+if [ ! -f /home/$user_name/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh ]
+then
+    echo "Grab catppuccin_macchiato-zsh-syntax-highlighting"
+    sudo -u $user_name wget -P /home/$user_name/.zsh "https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
+fi
+
 if [ ! -d /home/$user_name/.zsh/powerlevel10k ]
 then
     echo "install powerlevel10k"
