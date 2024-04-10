@@ -1,11 +1,11 @@
 {
 	"layer": "top",
 	"position": "top",
-        "margin-top": 2,
+	"margin-top": 2,
 
 	"modules-left": [
 		"hyprland/workspaces",
-                "custom/arrow2"
+		"custom/arrow2"
 	],
 
 	"modules-center": [
@@ -33,7 +33,7 @@
 			"critical": 15
 		},
 		"format-time": "{H}:{M:02}",
-		"format": "{icon} {capacity}% ({time})",
+		"format": "{capacity}% {icon} ({time})",
 		"format-charging": " {capacity}% ({time})",
 		"format-charging-full": " {capacity}%",
 		"format-full": "{icon} {capacity}%",
@@ -75,11 +75,13 @@
     },
 
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% {icon}",
+	"format-icon": "",
         "tooltip": true
     },
     "memory": {
-        "format": "{}% "
+        "format": "{usage}% {icon}",
+	"format-icon": ""
     },
 
     // Modules configuration
@@ -92,7 +94,7 @@
 
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{icon} {volume}%",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "",
