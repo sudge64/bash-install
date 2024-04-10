@@ -75,13 +75,12 @@
     },
 
     "cpu": {
-        "format": "{usage}% {icon}",
-	"format-icon": "",
+        "format": "{usage}% ",
         "tooltip": true
     },
     "memory": {
-        "format": "{usage}% {icon}",
-	"format-icon": ""
+        "format": "{}% ",
+        "tooltip": true
     },
 
     // Modules configuration
