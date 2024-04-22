@@ -1,1 +1,1 @@
-com.usebottles.bottles com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager org.godotengine.Godot org.mozilla.Thunderbird
+com.usebottles.bottles com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager org.godotengine.Godot org.mozilla.Thunderbird org.localsend.localsend_app
