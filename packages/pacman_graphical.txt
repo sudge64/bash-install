@@ -1,1 +1,1 @@
-alacritty kitty syncthing steam mangohud gnome-tweaks vlc flameshot pavucontrol udiskie
+alacritty kitty syncthing steam mangohud gnome-tweaks vlc flameshot pavucontrol udiskie mpv mpv-mpris
