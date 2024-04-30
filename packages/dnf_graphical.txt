@@ -1,1 +1,1 @@
-alacritty kitty syncthing steam gnome-tweaks vlc flameshot
+alacritty kitty syncthing steam gnome-tweaks vlc flameshot celluloid
