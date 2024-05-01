@@ -85,6 +85,13 @@ then
     sudo -u $user_name cp -rv ./files/hypr/*.conf /home/$user_name/.config/hypr/
 fi
 
+if [ ! -d /home/$user_name/.config/dunst/ ]
+then
+    echo "Set up dunst"
+    sudo -u $user_name mkdir /home/$user_name/.config/dunst
+    sudo -u $user_name cp -rv ./files/dunstrc /home/$user_name/.config/dunst/
+fi
+
 if [ ! -f /home/$user_name/.config/pipewire/pipewire.conf.d/10-focusrite-channels.conf ]
 then
     echo "Set up neovim"
