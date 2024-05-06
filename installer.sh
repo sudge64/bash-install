@@ -79,7 +79,7 @@ then
     check_choice
 elif grep -q "Arch" $release_file || grep -q "Artix" $release_file
 then
-    pacman -Syu && pacman -S wget -y
+    pacman -Syu && pacman -S wget reflector -y
 
     # Controls the amounts of packages to be installed
     echo "Do you wish to install Hyprland?"
