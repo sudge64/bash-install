@@ -1,1 +1,1 @@
-grimblast-git swww wlogout wlr-randr wkhtmltopdf-static amf-amdgpu-pro grimblast-git lib32-vulkan-amdgpu-pro looking-glass obs-streamfx-git obs-vkcapture-git rofi-lbonn-wayland-git swww vdhcoapp vulkan-amdgpu-pro wkhtmltopdf-static wlogout
+grimblast-git swww wlogout wlr-randr wkhtmltopdf-static grimblast-git looking-glass rofi-lbonn-wayland-git swww vdhcoapp wkhtmltopdf-static wlogout
