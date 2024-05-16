@@ -60,3 +60,21 @@ else
     echo "Not Installing Hyprland"
 fi
 pacman -S $(cat packages/pacman_framework.txt) --noconfirm
+
+if [ ! -f /etc/modprobe.d/hid_apple.conf ]
+then
+    echo "Move hid_apple.conf"
+    sudo -u $user_name cp ./files/hid_apple.conf /etc/modprobe.d/
+fi
+
+if [ ! -f /etc/modprobe.d/vfio.conf ]
+then
+    echo "Move vfio.conf"
+    sudo -u $user_name cp ./files/vfio.conf /etc/modprobe.d/
+fi
+
+if [ ! -f /etc/modules-load.d/v4l2loopback.conf ]
+then
+    echo "Move v4l2loopback.conf"
+    sudo -u $user_name cp ./files/v4l2loopback.conf /etc/modules-load.d/
+fi
