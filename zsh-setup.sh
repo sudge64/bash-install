@@ -41,39 +41,3 @@ then
     echo "Copy .zshrc."
     sudo -u $user_name cp ./files/.zshrc /home/$user_name/
 fi
-
-if [ ! -d /home/$user_name/.zsh/zsh-syntax-highlighting ]
-then
-    echo "Install zsh-syntax-highlighting from GitHub"
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/$user_name/.zsh/zsh-syntax-highlighting
-fi
-
-if [ ! -d /home/$user_name/.zsh/zsh-autosuggestions ]
-then
-    echo "Install zsh-syntax-highlighting from GitHub"
-    git clone https://github.com/zsh-users/zsh-autosuggestions /home/$user_name/.zsh/zsh-autosuggestions
-fi
-
-if [ ! -f /home/$user_name/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh ]
-then
-    echo "Grab catppuccin_macchiato-zsh-syntax-highlighting"
-    sudo -u $user_name wget -P /home/$user_name/.zsh "https://raw.githubusercontent.com/catppuccin/zsh-syntax-highlighting/main/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
-fi
-
-if [ ! -d /home/$user_name/.zsh/powerlevel10k ]
-then
-    echo "install powerlevel10k"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/$user_name/.zsh/powerlevel10k
-fi
-
-if [ ! -d /home/$user_name/.cache/ ]
-then
-    echo "Make directory .cache"
-    mkdir /home/$user_name/.cache
-fi
-
-if [ ! -f /home/$user_name/.cache/zshhistory ]
-then
-    echo "Touch zshhistory"
-    touch "/home/$user_name/.cache/zshhistory"
-fi
