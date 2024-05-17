@@ -24,10 +24,10 @@ fi
 if [ ! -f /home/$user_name/.local/share/fonts/Meslo* ]
 then
     echo "Download Meslo Nerd Font"
-    sudo -u $user_name wget -P /home/$user_name/.local/share/fonts/ "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip"
+    sudo -u $user_name wget -P /home/$user_name/.local/share/fonts/ "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.tar.xz"
     echo "Unzip Meslo Nerd Font"
-    sudo -u $user_name unzip /home/$user_name/.local/share/fonts/Meslo.zip -d /home/$user_name/.local/share/fonts/
-    sudo -u $user_name rm /home/$user_name/.local/share/fonts/Meslo.zip
+    sudo -u $user_name tar -xvf /home/$user_name/.local/share/fonts/Meslo.tar.xz -C /home/$user_name/.local/share/fonts/
+    sudo -u $user_name rm /home/$user_name/.local/share/fonts/Meslo.tar.xz
 fi
 
 if [ ! -f /home/$user_name/.p10k.zsh ]
