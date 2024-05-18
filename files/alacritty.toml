@@ -104,8 +104,8 @@ TERM = "xterm-256color-italic"
 size = 11
 
 [font.bold]
-# family = "MesloLGMDZ NF"
 family = "MesloLGS Nerd Font"
+# family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.glyph_offset]
@@ -113,13 +113,13 @@ x = 0
 y = 0
 
 [font.italic]
-# family = "MesloLGMDZ NF"
 family = "MesloLGS Nerd Font"
+# family = "FiraCode Nerd Font"
 style = "Italic"
 
 [font.normal]
-# family = "MesloLGMDZ NF"
 family = "MesloLGS Nerd Font"
+# family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font.offset]
