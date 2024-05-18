@@ -105,8 +105,8 @@ size = 11
 
 [font.bold]
 # family = "MesloLGMDZ NF"
-family = "MesloLGS NF"
-style = "Regular Bold"
+family = "MesloLGS Nerd Font"
+style = "Bold"
 
 [font.glyph_offset]
 x = 0
@@ -114,12 +114,12 @@ y = 0
 
 [font.italic]
 # family = "MesloLGMDZ NF"
-family = "MesloLGS NF"
-style = "Regular Italic"
+family = "MesloLGS Nerd Font"
+style = "Italic"
 
 [font.normal]
 # family = "MesloLGMDZ NF"
-family = "MesloLGS NF"
+family = "MesloLGS Nerd Font"
 style = "Regular"
 
 [font.offset]
@@ -427,7 +427,7 @@ action = "PasteSelection"
 mouse = "Middle"
 
 [scrolling]
-history = 0
+history = 10000
 multiplier = 3
 
 [selection]
