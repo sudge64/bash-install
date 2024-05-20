@@ -18,9 +18,7 @@ echo "Non sudo user name : $user_name"
 if [ ! -f /home/$user_name/.config/nvim/init.lua ]
 then
     echo "Set up neovim"
-    sudo -u $user_name mkdir /home/$user_name/.config/nvim
-    sudo -u $user_name cp ./files/init.lua /home/$user_name/.config/nvim/
-    sudo -u $user_name cp ./files/lazy-lock.json /home/$user_name/.config/nvim/
+    sudo -u $user_name cp -rv ./files/nvim/ /home/$user_name/.config/
 fi
 
 if [ ! -f /home/$user_name/.config/tmux/tmux.conf ]
