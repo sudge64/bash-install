@@ -15,7 +15,7 @@ done
 
 function server_install(){
         echo "Install cli packages."
-        apt install $(cat packages/apt_cli.txt) -y
+        apt install "$(cat packages/apt_cli.txt)" -y
 
         echo "Install dependencies for Neovim."
         apt install python3-venv ninja-build gettext libtool libtool-bin cmake g++ pkg-config unzip curl doxygen -y
@@ -24,14 +24,14 @@ function server_install(){
         git clone https://github.com/neovim/neovim ../neovim
 }
 
-if [ $choice -eq 1 ]
+if [ "$choice" -eq 1 ]
 then
     server_install
-elif [ $choice -eq 2 ]
+elif [ "$choice" -eq 2 ]
 then 
     server_install
     echo "Install graphical packages."
-    apt install $(cat packages/apt_graphical.txt) -y
+    apt install "$(cat packages/apt_graphical.txt)" -y
     echo "Install pipx"
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath

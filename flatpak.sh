@@ -8,21 +8,21 @@
 release_file=/etc/os-release
 
 echo "Installing Everyday Flatpaks."
-flatpak install -y $(cat packages/flatpak_everyday.txt)
+flatpak install -y "$(cat packages/flatpak_everyday.txt)"
 
-if grep -q "Nobara" $release_file
+if grep -q "Nobara" "$release_file"
 then
     echo "Installing Sound & Video Flatpaks."
-    flatpak install -y $(cat packages/flatpak_sound_and_video.txt)
+    flatpak install -y "$(cat packages/flatpak_sound_and_video.txt)"
     flatpak uninstall org.blender.Blender -y
 else
     echo "Installing Sound & Video Flatpaks."
-    flatpak install -y $(cat packages/flatpak_sound_and_video.txt)
+    flatpak install -y "$(cat packages/flatpak_sound_and_video.txt)"
 fi
 
 
 echo "Installing Funtimes Flatpaks."
-flatpak install -y $(cat packages/flatpak_funtimes.txt)
+flatpak install -y "$(cat packages/flatpak_funtimes.txt)"
 
 echo "Installing CAD Flatpaks."
-flatpak install -y $(cat packages/flatpak_cad.txt)
+flatpak install -y "$(cat packages/flatpak_cad.txt)"

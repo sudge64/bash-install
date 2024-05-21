@@ -15,7 +15,7 @@ done
 
 function server_install(){
     echo "Install CLI packages"
-    dnf install $(cat packages/dnf_cli.txt) -y
+    dnf install "$(cat packages/dnf_cli.txt)" -y
 
     echo "Group Install Development Tools and Libraries"
     dnf group install "Development Tools" "Development Libraries" -y
@@ -25,7 +25,7 @@ function server_install(){
     dnf group install "C Development Tools and Libraries" -y
 }
 
-if [ ! $(rpm -qa | grep -i rpmfusion) ]
+if [ ! "$(rpm -qa | grep -i rpmfusion)" ]
 then
     echo "Enable RPM Fusion Free and Non-Free Repos."
     dnf install \ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -36,14 +36,14 @@ echo "Add Flathub repo"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
-if [ $choice -eq 1 ]
+if [ "$choice" -eq 1 ]
 then
     server_install
-elif [ $choice -eq 2 ]
+elif [ "$choice" -eq 2 ]
 then 
     server_install
     echo "Install Graphical packages"
-    dnf install $(cat packages/dnf_graphical.txt) -y
+    dnf install "$(cat packages/dnf_graphical.txt)" -y
     echo "Install pipx"
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath

@@ -18,4 +18,4 @@ curl -v https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/I
 mv InstallCryoUtilities.desktop ~/Desktop
 
 echo "Install Flatpaks"
-flatpak install $(cat packages/flatpak_steamdeck.txt) -y
+flatpak install "$(cat packages/flatpak_steamdeck.txt)" -y
