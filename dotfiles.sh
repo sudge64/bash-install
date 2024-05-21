@@ -62,11 +62,10 @@ then
     sudo -u $user_name cp ./files/config.rasi /home/$user_name/.config/rofi/
 fi
 
-if [ ! -d /home/$user_name/.config/waybar/ ]
+if [ ! -f /home/$user_name/.config/waybar/config.jsonc ]
 then
     echo "Set up waybar"
-    sudo -u $user_name mkdir /home/$user_name/.config/waybar
-    sudo -u $user_name cp -r ./files/waybar/* /home/$user_name/.config/waybar/
+    sudo -u $user_name cp -rv ./files/waybar/ /home/$user_name/.config/
 fi
 
 if [ ! -d /home/$user_name/.config/wlogout/ ]
