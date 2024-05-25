@@ -2,11 +2,8 @@
   "layer": "top",
   "position": "top",
   "margin-top": 2,
-
   "modules-left": ["hyprland/workspaces", "custom/arrow2"],
-
   "modules-center": ["hyprland/window"],
-
   "modules-right": [
     "custom/arrow1",
     "backlight",
@@ -18,9 +15,7 @@
     "clock",
     "tray",
   ],
-
   // Modules
-
   "battery": {
     "interval": 10,
     "states": {
@@ -36,7 +31,6 @@
     "format-icons": ["", "", "", "", ""],
     "tooltip": false,
   },
-
   "clock": {
     "timezone": "America/Chicago",
     "format": "{:%I:%M %p}",
@@ -62,7 +56,6 @@
       "on-scroll-down": "shift_down",
     },
   },
-
   "cpu": {
     "format": "{usage}% ",
     "tooltip": true,
@@ -71,7 +64,6 @@
     "format": "{}% ",
     "tooltip": true,
   },
-
   // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -79,7 +71,6 @@
     "warp-on-scroll": true,
     "format": "{name}",
   },
-
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{volume}% {icon}",
@@ -97,25 +88,21 @@
     },
     "on-click": "pavucontrol",
   },
-
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp3_input",
     //"hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
     "critical-threshold": 80,
     "format": "{temperatureC}°C {icon}",
     "format-icons": [""],
   },
-
   "backlight": {
     "format": "{percent}% {icon}",
     "format-icons": ["", ""],
   },
-
   "tray": {
     "icon-size": 18,
     "spacing": 10,
   },
-
   "custom/arrow1": {
     "format": "",
     "tooltip": false,
