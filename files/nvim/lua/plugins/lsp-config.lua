@@ -38,6 +38,10 @@ return {
 				-- See `:help K` for why this keymap
 				nmap("<S-k>", vim.lsp.buf.hover, "Hover Documentation")
 				-- nmap('<C-K>', vim.lsp.buf.signature_help, 'Signature Documentation')
+				-- Create a command `:Signature` local to the LSP buffer
+				vim.api.nvim_buf_create_user_command(bufnr, "Signature", function(_)
+					vim.lsp.buf.signature_help()
+				end, { desc = "Signature Documentation" })
 
 				-- Lesser used LSP functionality
 				nmap("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
