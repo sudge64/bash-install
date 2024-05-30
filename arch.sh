@@ -50,6 +50,8 @@ then
     echo "Installing Hyprland"
     pacman -S "$(cat packages/hyprland.txt)" --noconfirm
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+    echo "Moving hyprland conf files"
+    sudo -u $user_name cp -ruv ./files/hypr/ /home/$user_name/.config/
     echo "Installing Paru"
     git clone https://aur.archlinux.org/paru.git ../paru
     cd ../paru
