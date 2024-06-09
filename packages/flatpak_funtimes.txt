@@ -1,1 +1,1 @@
-net.davidotek.pupgui2 net.lutris.Lutris org.prismlauncher.PrismLauncher
+net.davidotek.pupgui2 net.lutris.Lutris org.prismlauncher.PrismLauncher com.github.Matoking.protontricks
