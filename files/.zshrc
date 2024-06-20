@@ -101,8 +101,10 @@ alias t="tmux"
 alias btw="fastfetch"
 alias cd="z"
 alias cdi="zi"
+alias lgc="looking-glass-client -F"
 
 # Exports
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export TERM=xterm-256color
+echo "Chris Stream 43:40"
