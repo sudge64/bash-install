@@ -27,7 +27,7 @@ function server_install(){
     echo 'unix_sock_group = "libvirt"' >> /etc/libvirt/libvirtd.conf
     echo 'unix_sock_rw_perms = "0770"' >> /etc/libvirt/libvirtd.conf
 
-    usermod -a -G libvirt "$user_name"
+    usermod -a -G libvirt input "$user_name"
     newgrp libvirt
 
     echo "Remember! sudo systemctl start libvirtd.service"
