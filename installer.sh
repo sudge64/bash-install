@@ -35,10 +35,10 @@ esac
 
 # Function to check if Desktop or Server has been picked.
 function check_choice(){
-    if [ "$choice" -eq 1 ]
+    if [ $choice -eq 1 ]
     then
         source ./flatpak.sh
-    elif [ "$choice" -eq 2 ]
+    elif [ $choice -eq 2 ]
     then 
         echo "servers do not typically need flatpaks."
     else
@@ -46,32 +46,32 @@ function check_choice(){
     fi
 }
 
-source ./dotfiles.sh -u "$SUDO_USER"
-source ./zsh-setup.sh -u "$SUDO_USER"
+source ./dotfiles.sh -u $SUDO_USER
+source ./zsh-setup.sh -u $SUDO_USER
 
 # Main if-else block,
 # ID's OS, updates packages, and runs the corresponding script.
-if grep -q "Fedora" "$release_file" || grep -q "Amazon" "$release_file"
+if grep -q "Fedora" $release_file || grep -q "Amazon" $release_file
 then
     dnf upgrade && dnf install wget -y
-    source ./fedora.sh -c "$choice"
+    source ./fedora.sh -c $choice
     check_choice
-elif grep -q "Nobara" "$release_file"
+elif grep -q "Nobara" $release_file
 then
     dnf upgrade && dnf install wget -y
-    source ./nobara.sh -c "$choice" -u "$SUDO_USER"
+    source ./nobara.sh -c $choice -u $SUDO_USER
     check_choice
-elif grep -q "Alpine" "$release_file"
+elif grep -q "Alpine" $release_file
 then
     apk update && apk upgrade && apk add wget
     source ./alpine.sh
     check_choice
-elif grep -q "Debian" "$release_file" || grep -q "Ubuntu" "$release_file" || grep -q "Pop!_OS" "$release_file"
+elif grep -q "Debian" $release_file || grep -q "Ubuntu" $release_file || grep -q "Pop!_OS" $release_file
 then
     apt update && apt upgrade && apt install wget -y
-    source ./debian.sh -c "$choice"
+    source ./debian.sh -c $choice
     check_choice
-elif grep -q "Arch" "$release_file" || grep -q "Artix" "$release_file"
+elif grep -q "Arch" $release_file || grep -q "Artix" $release_file
 then
     pacman -Syu && pacman -S wget reflector -y
 
@@ -82,19 +82,19 @@ then
 
     read -r choice_hyprland;
 
-    case "$choice_hyprland" in
+    case $choice_hyprland in
         1) echo "Installing Hyprland";;
         2) echo "Not Installing Hyprland";;
         *) echo "Invalid choice."
             exit 0;;
     esac
 
-    if grep -q "steamdeck" "$hostname"
+    if grep -q "steamdeck" $hostname
     then
         source ./steamdeck.sh
     else
         sudo reflector --verbose --country 'United States' -l 10 --sort rate --save /etc/pacman.d/mirrorlist
-        source ./arch.sh -c "$choice" -h "$choice_hyprland" -u "$SUDO_USER"
+        source ./arch.sh -c $choice -h $choice_hyprland -u $SUDO_USER
 
     fi
     check_choice

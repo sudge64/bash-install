@@ -15,7 +15,7 @@ done
 
 function server_install(){
     echo "Install CLI packages"
-    dnf install "$(cat packages/dnf_cli.txt)" -y
+    dnf install $(cat packages/dnf_cli.txt) -y
 
     echo "Group Install Development Tools and Libraries"
     dnf group install "Development Tools" "Development Libraries" -y
@@ -43,7 +43,7 @@ elif [ "$choice" -eq 2 ]
 then 
     server_install
     echo "Install Graphical packages"
-    dnf install "$(cat packages/dnf_graphical.txt)" -y
+    dnf install $(cat packages/dnf_graphical.txt) -y
     echo "Install pipx"
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
