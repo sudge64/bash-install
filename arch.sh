@@ -58,6 +58,7 @@ then
     makepkg -si
     cd ../bash-install
     paru -S $(cat packages/paru.txt)
+    source ./catppuccin.sh
 else
     echo "Not Installing Hyprland"
 fi
