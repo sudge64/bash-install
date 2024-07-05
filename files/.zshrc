@@ -85,11 +85,33 @@ bindkey '^p'      history-search-backward
 bindkey '^n'      history-search-forward
 
 # Aliases
-alias updateD="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
-alias upgradeF="sudo dnf upgrade -y && flatpak update -y"
-alias upgradeN="sudo dnf update rpmfusion-nonfree-release rpmfusion-free-release fedora-repos nobara-repos --refresh && sudo dnf distro-sync --refresh && sudo dnf update --refresh && flatpak update -y"
-alias updateA="sudo pacman -Syu --noconfirm && flatpak update -y"
-alias updateM="brew update && brew upgrade"
+
+# Debian update alias
+if command -v apt &> /dev/null
+then
+  alias updateD="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
+fi
+
+# Fedora update aliases
+if command -v dnf &> /dev/null
+then
+  alias upgradeF="sudo dnf upgrade -y && flatpak update -y"
+  alias upgradeN="sudo dnf update rpmfusion-nonfree-release rpmfusion-free-release fedora-repos nobara-repos --refresh && sudo dnf distro-sync --refresh && sudo dnf update --refresh && flatpak update -y"
+fi
+
+# Arch update alias
+# Check if paru is installed
+if command -v paru &> /dev/null
+then
+  alias updateA="paru -Syu --noconfirm && flatpak update -y"
+else
+  alias updateA="sudo pacman -Syu --noconfirm && flatpak update -y"
+fi
+
+if command -v brew &> /dev/null
+then
+  alias updateM="brew update && brew upgrade"
+fi
 alias ls="ls --color"
 alias ll="ls -l --color"
 alias la="ls -a --color"
@@ -99,7 +121,9 @@ alias ld="ls -ld --color"
 alias nv="nvim"
 alias t="tmux"
 alias btw="fastfetch"
+alias smol="fastfetch --config examples/13"
 alias cd="z"
+unalias zi
 alias cdi="zi"
 alias lgc="looking-glass-client -F"
 
