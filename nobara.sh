@@ -33,8 +33,6 @@ function server_install(){
     usermod -aG kvm user_name
     usermod -aG input user_name
     usermod -aG disk user_name
-
-
 }
 
 if [ ! $(rpm -qa | grep -i rpmfusion) ]
