@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 2,
+  "margin-top": 0,
 
   "modules-left": ["hyprland/workspaces", "custom/arrow2"],
 
