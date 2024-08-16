@@ -120,7 +120,7 @@ alias lla="ls -lah --color"
 alias ld="ls -ldh --color"
 alias nv="nvim"
 alias t="tmux"
-alias btw="fastfetch"
+alias btw="fastfetch --config examples/10"
 alias smol="fastfetch --config examples/13"
 alias cd="z"
 unalias zi
