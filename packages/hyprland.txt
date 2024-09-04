@@ -1,1 +1,1 @@
-hyprland hyprpaper wofi waybar xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal-hyprland gamescope
+hyprland hyprpaper hypridle hyprlock wofi waybar xdg-desktop-portal xdg-desktop-portal-gtk xdg-desktop-portal-gnome xdg-desktop-portal-hyprland gamescope gamemode

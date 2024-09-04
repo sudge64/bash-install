@@ -1,1 +1,1 @@
-grimblast-git swww wlogout wlr-randr wkhtmltopdf-static grimblast-git looking-glass rofi-lbonn-wayland-git swww vdhcoapp wkhtmltopdf-static wlogout hyprpicker
+grimblast-git swww wlogout wlr-randr wkhtmltopdf-static grimblast-git looking-glass rofi-lbonn-wayland-git swww vdhcoapp wkhtmltopdf-static wlogout hyprpicker swaylock-effects
