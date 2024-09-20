@@ -41,6 +41,7 @@ ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "/home/$user_name/.config/gtk-4.0/gtk.css"
 ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "/home/$user_name/.config/gtk-4.0/gtk-dark.css"
 
 # Flatpak theming
+sudo flatpak override --filesystem=$HOME/.local/share/themes
 sudo flatpak override --env=GTK_THEME="catppuccin-${FLAVOR}-${ACCENT}-standard+default"
 
 cd /home/$user_name/.github/bash-install
