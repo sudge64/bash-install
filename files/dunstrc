@@ -1,16 +1,25 @@
 [global]
-frame_color = "#7dc4e4"
-separator_color= frame
+    font = MesloLGS Nerd Font 11
+    format = "<b>%a</b>\n<i>%s</i>%p %n\n%b"
+    frame_color = "#7dc4e4"
+    separator_color = frame
+    icon_path = /usr/share/icons/Adwaita
+    corner_radius = 10
+    progress_bar = true
+    progress_bar_height = 10
+    mouse_left_click = close_current
+    mouse_middle_click = close_all 
+    mouse_right_click = context
 
 [urgency_low]
-background = "#24273a"
-foreground = "#cad3f5"
+    background = "#24273a"
+    foreground = "#cad3f5"
 
 [urgency_normal]
-background = "#24273a"
-foreground = "#cad3f5"
+    background = "#24273a"
+    foreground = "#cad3f5"
 
 [urgency_critical]
-background = "#24273a"
-foreground = "#cad3f5"
-frame_color = "#f5a97f"
+    background = "#24273a"
+    foreground = "#cad3f5"
+    frame_color = "#f5a97f"
