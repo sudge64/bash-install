@@ -9,6 +9,16 @@
 #
 eval "$(zoxide init zsh)"
 
+# Function for yazi from https://yazi-rs.github.io/docs/quick-start
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -131,3 +141,4 @@ alias lgc="looking-glass-client -F"
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export TERM=xterm-256color
+export EDITOR='nvim'
