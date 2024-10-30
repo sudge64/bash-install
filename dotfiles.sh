@@ -26,7 +26,7 @@ then
     echo "Set up tmux"
     sudo -u $user_name mkdir /home/$user_name/.config/tmux
     sudo -u $user_name cp ./files/tmux.conf /home/$user_name/.config/tmux/
-    git clone https://github.com/tmux-plugins/tpm /home/$user_name/.config/tmux/plugins/tpm
+    sudo -u $user_name git clone https://github.com/tmux-plugins/tpm /home/$user_name/.config/tmux/plugins/tpm
 fi
 
 if [ ! -f /home/$user_name/.config/kitty/kitty.conf ]
@@ -55,7 +55,7 @@ fi
 if [ ! -f /home/$user_name/.config/rofi/config.rasi ]
 then
     echo "Set up rofi"
-    git clone https://github.com/catppuccin/rofi ../rofi
+    sudo -u $user_name git clone https://github.com/catppuccin/rofi ../rofi
     cd ../rofi/basic
     ./install.sh
     cd ../../bash-install
@@ -87,6 +87,13 @@ then
     echo "Set up dunst"
     sudo -u $user_name mkdir /home/$user_name/.config/dunst
     sudo -u $user_name cp -rv ./files/dunstrc /home/$user_name/.config/dunst/
+fi
+
+if [ ! -d /home/$user_name/.config/yazi/config.rasi ]
+then
+    echo "Set up yazi"
+    sudo -u $user_name cp -rv ./files/yazi/* /home/$user_name/.config/yazi/
+    sudo -u $user_name git clone https://github.com/yazi-rs/flavors /home/$user_name/.config/yazi/flavors
 fi
 
 if [ ! -f /home/$user_name/.config/pipewire/pipewire.conf.d/10-focusrite-channels.conf ]
