@@ -39,14 +39,14 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 if [ "$choice" -eq 1 ]
 then
     server_install
-elif [ "$choice" -eq 2 ]
-then 
-    server_install
     echo "Install Graphical packages"
     dnf install $(cat packages/dnf_graphical.txt) -y
     echo "Install pipx"
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
+elif [ "$choice" -eq 2 ]
+then 
+    server_install
 else
     echo "invalid choice?"
 fi

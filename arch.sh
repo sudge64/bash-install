@@ -36,11 +36,11 @@ function server_install(){
 if [ "$choice" -eq 1 ]
 then
     server_install
+    echo "Install graphical packages."
+    pacman -S $(cat packages/pacman_graphical.txt) --noconfirm
 elif [ "$choice" -eq 2 ]
 then 
     server_install
-    echo "Install graphical packages."
-    pacman -S $(cat packages/pacman_graphical.txt) --noconfirm
 else
     echo "invalid choice?"
 fi
