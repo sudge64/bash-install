@@ -32,6 +32,8 @@ then
     echo "Install pipx"
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --user
+
 elif [ "$choice" -eq 2 ]
 then 
     server_install

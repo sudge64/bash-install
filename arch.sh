@@ -38,6 +38,8 @@ then
     server_install
     echo "Install graphical packages."
     pacman -S $(cat packages/pacman_graphical.txt) --noconfirm
+    flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo --user
+
 elif [ "$choice" -eq 2 ]
 then 
     server_install
