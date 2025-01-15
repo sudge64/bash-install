@@ -83,3 +83,9 @@ then
     echo "Move v4l2loopback.conf"
     cp ./files/v4l2loopback.conf /etc/modules-load.d/
 fi
+
+if [ ! -f /etc/tmpfiles.d/10-looking-glass.conf ]
+then
+    echo "Move 10-looking-glass.conf"
+    cp ./files/10-looking-glass.conf /etc/tmpfiles.d/
+fi
