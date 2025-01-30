@@ -200,18 +200,19 @@
   color: @text;
 }
 
-#custom-launcher {
+#custom-appmenu {
   /*font-weight: bold;*/
-  padding-left: 4pt;
-  padding-right: 4pt;
+  padding-left: 8pt;
+  padding-right: 8pt;
+    font-size: 11pt;
   color: @text;
   background: @surface2;
 }
 
-#custom-poweroff {
+#custom-exit {
   /*font-weight: bold;*/
-  padding-left: 4pt;
-  padding-right: 4pt;
+  padding-right: 12pt;
+    font-size: 11pt;
   color: @text;
   background: @surface2;
 }

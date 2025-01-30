@@ -3,7 +3,7 @@
   "position": "top",
   "margin-top": 0,
 
-  "modules-left": ["hyprland/workspaces", "custom/arrow2"],
+  "modules-left": ["custom/appmenu", "hyprland/workspaces", "custom/arrow2"],
 
   "modules-center": ["hyprland/window"],
 
@@ -17,6 +17,7 @@
     "battery",
     "clock",
     "tray",
+    "custom/exit",
   ],
 
   // Modules
@@ -35,6 +36,7 @@
     "format-alt": "{icon} {power}W",
     "format-icons": ["", "", "", "", ""],
     "tooltip": false,
+    "on-click": "$HOME/.local/bin/send_notify --name power",
   },
 
   "clock": {
@@ -119,8 +121,21 @@
     "format": "",
     "tooltip": false,
   },
+
   "custom/arrow2": {
     "format": "",
     "tooltip": false,
+  },
+
+  "custom/appmenu": {
+    "format": "󰀻",
+    "on-click": "sleep 0.2;rofi -show drun",
+    "tooltip": "Open the App Menu",
+  },
+
+  "custom/exit": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": "Open the Power Menu",
   },
 }
