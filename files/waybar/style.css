@@ -201,18 +201,21 @@
 }
 
 #custom-appmenu {
-  /*font-weight: bold;*/
   padding-left: 8pt;
   padding-right: 8pt;
-    font-size: 11pt;
+  font-size: 11pt;
   color: @text;
   background: @surface2;
 }
 
+#custom-appmenu:hover {
+  background: @base;
+  color: @text;
+}
+
 #custom-exit {
-  /*font-weight: bold;*/
   padding-right: 12pt;
-    font-size: 11pt;
+  font-size: 11pt;
   color: @text;
   background: @surface2;
 }
