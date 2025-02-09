@@ -130,12 +130,14 @@
   "custom/appmenu": {
     "format": "󰀻",
     "on-click": "sleep 0.2;rofi -show drun",
-    "tooltip": "Open the App Menu",
+    "tooltip": true,
+    "tooltip-format": "Open the App Menu",
   },
 
   "custom/exit": {
     "format": "⏻",
     "on-click": "wlogout",
-    "tooltip": "Open the Power Menu",
+    "tooltip": true,
+    "tooltip-format": "Open the Power Menu",
   },
 }
