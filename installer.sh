@@ -98,7 +98,7 @@ then
 
     fi
     check_choice
-elif echo "$(sw_vers -productName)" | grep "macOS"
+elif sw_vers -productName | grep "macOS"
 then
     source ./macintosh.sh
 else
