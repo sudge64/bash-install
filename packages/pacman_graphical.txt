@@ -1,1 +1,1 @@
-alacritty kitty syncthing steam mangohud gnome-tweaks vlc flameshot pavucontrol udiskie mpv mpv-mpris celluloid libreoffice-fresh pdfarranger wl-clipboard libreoffice-fresh discord nwg-look flatpak
+alacritty kitty syncthing steam mangohud gnome-tweaks vlc flameshot pavucontrol udiskie mpv mpv-mpris celluloid libreoffice-fresh pdfarranger wl-clipboard libreoffice-fresh discord nwg-look flatpak rofi-calc rofi-emoji
