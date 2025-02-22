@@ -142,3 +142,11 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export TERM=xterm-256color
 export EDITOR='nvim'
+if grep -q "SteamOS" /etc/os-release
+then
+    export SADX="/home/deck/.local/share/Steam/steamapps/common/Sonic Adventure DX"
+    export SA2B="/home/deck/.local/share/Steam/steamapps/common/Sonic Adventure 2"
+else
+    export SADX="/media/cjwade/sandisk2tb/SteamLibrary/steamapps/common/Sonic Adventure DX"
+    export SA2B="/media/cjwade/sandisk2tb/SteamLibrary/steamapps/common/Sonic Adventure 2"
+fi
