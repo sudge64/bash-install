@@ -48,9 +48,6 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
--- NOTE: For obsidian.nvim
-vim.opt_local.conceallevel = 2
-
 -- [[ Basic Keymaps ]]
 
 -- Keymaps for better default experience
