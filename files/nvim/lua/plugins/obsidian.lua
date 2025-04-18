@@ -18,10 +18,15 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
+    ui = {
+      {
+        enable = true,
+      },
+    },
     workspaces = {
       {
         name = "Vault",
-        path = "/media/cjwade/cjshare/Documents/notes",
+        path = "/home/cjwade/Documents/notes",
       },
       --{
         --name = "work",
