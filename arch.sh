@@ -68,7 +68,7 @@ pacman -S $(cat packages/pacman_framework.txt) --noconfirm
 
 if [ ! -f /etc/modprobe.d/hid_apple.conf ]
 then
-    echo "Move hid_apple.conf"
+    echo "Move hid_apple.conf to /etc/modprobe.d"
     cp ./files/hid_apple.conf /etc/modprobe.d/
 fi
 
