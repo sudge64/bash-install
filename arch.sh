@@ -74,18 +74,18 @@ fi
 
 if [ ! -f /etc/modprobe.d/vfio.conf ]
 then
-    echo "Move vfio.conf"
+    echo "Move vfio.conf to /etc/modprobe.d"
     cp ./files/vfio.conf /etc/modprobe.d/
 fi
 
 if [ ! -f /etc/modules-load.d/v4l2loopback.conf ]
 then
-    echo "Move v4l2loopback.conf"
+    echo "Move v4l2loopback.conf to /etc/modprobe.d"
     cp ./files/v4l2loopback.conf /etc/modules-load.d/
 fi
 
 if [ ! -f /etc/tmpfiles.d/10-looking-glass.conf ]
 then
-    echo "Move 10-looking-glass.conf"
+    echo "Move 10-looking-glass.conf to /etc/tmpfiles.d"
     cp ./files/10-looking-glass.conf /etc/tmpfiles.d/
 fi
