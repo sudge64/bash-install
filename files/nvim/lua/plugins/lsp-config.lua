@@ -1,12 +1,12 @@
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end,
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		config = function()
 			-- LSP settings.
 			--  This function gets run when an LSP connects to a particular buffer.
@@ -91,15 +91,6 @@ return {
 			-- Ensure the servers above are installed
 			local mason_lspconfig = require("mason-lspconfig")
 			mason_lspconfig.setup({ ensure_installed = vim.tbl_keys(servers) })
-			mason_lspconfig.setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({
-						capabilities = capabilities,
-						on_attach = on_attach,
-						settings = servers[server_name],
-					})
-				end,
-			})
 		end,
 	},
 	{
@@ -109,8 +100,8 @@ return {
 		},
 		dependencies = {
 			-- Automatically install LSPs to stdpath for neovim
-			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason.nvim",
+			"mason-org/mason-lspconfig.nvim",
 			-- Additional lua configuration, makes nvim stuff amazing!
 			"folke/neodev.nvim",
 		},
