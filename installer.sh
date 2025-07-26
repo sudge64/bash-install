@@ -20,14 +20,18 @@ fi
 echo "--Menu--"
 echo "1.) Desktop"
 echo "2.) Server"
-echo "3.) Exit"
+echo "3.) Basic Dev Environment"
+echo "4.) Exit"
 
 read -r choice;
 
 case "$choice" in
     1) echo "You have chosen Desktop. Flatpaks will be installed. (Not on macOS)";;
     2) echo "You have chosen Server. Flatpaks will not be installed.";;
-    3) echo "Exiting Program."
+    3) echo "You have chosen Basic Dev Environment. Tmux and Vim will be configured."
+        source ./basic.sh
+        exit 0;;
+    4) echo "Exiting Program."
         exit 0;;
     *) echo "Invalid choice."
         exit 0;;
