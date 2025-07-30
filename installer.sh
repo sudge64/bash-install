@@ -29,7 +29,7 @@ case "$choice" in
     1) echo "You have chosen Desktop. Flatpaks will be installed. (Not on macOS)";;
     2) echo "You have chosen Server. Flatpaks will not be installed.";;
     3) echo "You have chosen Basic Dev Environment. Tmux and Vim will be configured."
-        source ./basic.sh
+        source ./basic.sh -u $SUDO_USER
         exit 0;;
     4) echo "Exiting Program."
         exit 0;;

@@ -30,5 +30,5 @@ then
     sudo -u $user_name sh /home/$user_name/.vim_runtime/install_awesome_vimrc.sh
     sudo -u $user_name mkdir -p /home/$user_name/.vim_runtime/pack/plugins/start
     sudo -u $user_name git clone https://github.com/christoomey/vim-tmux-navigator /home/$user_name/.vim_runtime/pack/plugins/start/vim-tmux-navigator
-    sudo -u $user_name ./files/my_configs.vim /home/$user_name/.vim_runtime/
+    sudo -u $user_name cp ./files/my_configs.vim /home/$user_name/.vim_runtime/
 fi
