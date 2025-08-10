@@ -1,1 +1,4 @@
-com.ultimaker.cura org.freecadweb.FreeCAD org.kicad.KiCad org.openscad.OpenSCAD
+com.ultimaker.cura
+org.freecadweb.FreeCAD
+org.kicad.KiCad
+org.openscad.OpenSCAD

@@ -1,1 +1,10 @@
-com.usebottles.bottles com.github.tchx84.Flatseal com.mattjakeman.ExtensionManager org.godotengine.Godot org.mozilla.Thunderbird org.localsend.localsend_app org.gnome.Evince org.gnome.Loupe org.gnome.TextEditor org.gnome.Calculator
+com.usebottles.bottles
+com.github.tchx84.Flatseal
+com.mattjakeman.ExtensionManager
+org.godotengine.Godot
+org.mozilla.Thunderbird
+org.localsend.localsend_app
+org.gnome.Evince
+org.gnome.Loupe
+org.gnome.TextEditor
+org.gnome.Calculator

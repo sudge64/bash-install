@@ -1,1 +1,12 @@
-alacritty kitty syncthing steam gnome-tweaks vlc flameshot nautilus-image-converter gnome-sushi celluloid pdfarranger flatpak
+alacritty
+kitty
+syncthing
+steam
+gnome-tweaks
+vlc
+flameshot
+nautilus-image-converter
+gnome-sushi
+celluloid
+pdfarranger
+flatpak

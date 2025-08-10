@@ -1,1 +1,13 @@
-org.blender.Blender org.audacityteam.Audacity org.freac.freac org.gimp.GIMP org.inkscape.Inkscape org.kde.krita fr.handbrake.ghb com.obsproject.Studio com.obsproject.Studio.Plugin.DroidCam com.obsproject.Studio.Plugin.Ocr com.obsproject.Studio.Plugin.OBSVkCapture com.obsproject.Studio.Plugin.InputOverlay com.obsproject.Studio.Plugin.BackgroundRemoval
+org.blender.Blender
+org.audacityteam.Audacity
+org.freac.freac
+org.gimp.GIMP
+org.inkscape.Inkscape
+org.kde.krita
+fr.handbrake.ghb
+com.obsproject.Studio
+com.obsproject.Studio.Plugin.DroidCam
+com.obsproject.Studio.Plugin.Ocr
+com.obsproject.Studio.Plugin.OBSVkCapture
+com.obsproject.Studio.Plugin.InputOverlay
+com.obsproject.Studio.Plugin.BackgroundRemoval

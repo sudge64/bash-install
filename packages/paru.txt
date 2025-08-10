@@ -1,1 +1,8 @@
-banana-cursor-bin grimblast-git looking-glass nvm rofi-lbonn-wayland-git vdhcoapp wkhtmltopdf-static wlogout hyprland-qtutils
+banana-cursor-bin
+grimblast-git
+nvm
+rofi-lbonn-wayland-git
+vdhcoapp
+wkhtmltopdf-static
+wlogout
+hyprland-qtutils
