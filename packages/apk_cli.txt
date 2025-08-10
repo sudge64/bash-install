@@ -1,9 +1,9 @@
-htop
-cmatrix
-neofetch
-zsh
 cifs-utils
+cmatrix
+ffmpeg
+htop
+neofetch
 neovim
 shadow
 tmux
-ffmpeg
+zsh

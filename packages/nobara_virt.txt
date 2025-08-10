@@ -1,6 +1,6 @@
-qemu
 edk2-ovmf
 libvirt
+qemu
 virt-install
 virt-manager
 virt-viewer

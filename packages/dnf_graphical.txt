@@ -1,10 +1,10 @@
 alacritty
-kitty
-syncthing
-steam
-gnome-tweaks
-vlc
-flameshot
 celluloid
-pdfarranger
+flameshot
 flatpak
+gnome-tweaks
+kitty
+pdfarranger
+steam
+syncthing
+vlc

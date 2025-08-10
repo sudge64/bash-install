@@ -1,6 +1,6 @@
+com.github.Matoking.protontricks
+io.github.hedge_dev.hedgemodmanager
 net.davidotek.pupgui2
 net.lutris.Lutris
-org.prismlauncher.PrismLauncher
-com.github.Matoking.protontricks
 org.libretro.RetroArch
-io.github.hedge_dev.hedgemodmanager
+org.prismlauncher.PrismLauncher
