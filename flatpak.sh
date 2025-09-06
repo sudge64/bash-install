@@ -26,3 +26,4 @@ flatpak install -uy $(cat packages/flatpak_funtimes.txt)
 
 echo "Installing CAD Flatpaks."
 flatpak install -uy $(cat packages/flatpak_cad.txt)
+
