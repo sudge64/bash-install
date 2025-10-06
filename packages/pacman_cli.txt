@@ -19,7 +19,7 @@ gvfs-smb
 htop
 linux-headers
 man-db
-neofetch
+fastfetch
 neovim
 network-manager-applet
 networkmanager
