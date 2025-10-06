@@ -7,7 +7,6 @@ dust
 ffmpeg
 fuse2
 fzf
-fzf
 glow
 gvfs
 gvfs-afc
