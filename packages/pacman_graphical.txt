@@ -15,6 +15,8 @@ mpv-mpris
 nwg-look
 pavucontrol
 pdfarranger
+qt5ct
+qt6ct
 rofi-calc
 rofi-emoji
 steam
