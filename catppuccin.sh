@@ -40,6 +40,8 @@ ln -sf "${THEME_DIR}/gtk-4.0/assets" "/home/$user_name/.config/gtk-4.0/assets" &
 ln -sf "${THEME_DIR}/gtk-4.0/gtk.css" "/home/$user_name/.config/gtk-4.0/gtk.css" &&
 ln -sf "${THEME_DIR}/gtk-4.0/gtk-dark.css" "/home/$user_name/.config/gtk-4.0/gtk-dark.css"
 
+gsettings set org.gnome.desktop.interface gtk-theme catppuccin-${FLAVOR}-${ACCENT}-standard+default
+
 # Flatpak theming
 sudo flatpak override --filesystem=$HOME/.local/share/themes
 sudo flatpak override --env=GTK_THEME="catppuccin-${FLAVOR}-${ACCENT}-standard+default"
