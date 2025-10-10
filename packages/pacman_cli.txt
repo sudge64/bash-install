@@ -4,6 +4,7 @@ btop
 cifs-utils
 dunst
 dust
+fastfetch
 ffmpeg
 fuse2
 fzf
@@ -19,12 +20,12 @@ gvfs-smb
 htop
 linux-headers
 man-db
-fastfetch
 neovim
 network-manager-applet
 networkmanager
 nfs-utils
 nvtop
+pam-u2f
 pandoc
 pipewire-alsa
 pipewire-jack
