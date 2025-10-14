@@ -18,6 +18,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 htop
+hyprpolkitagent
 linux-headers
 man-db
 neovim
