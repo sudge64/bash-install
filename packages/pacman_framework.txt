@@ -1,3 +1,4 @@
 brightnessctl
+fprintd
 iio-sensor-proxy
 power-profiles-daemon
