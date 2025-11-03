@@ -1,4 +1,5 @@
 com.github.Matoking.protontricks
+io.github.gopher64.gopher64
 io.github.hedge_dev.hedgemodmanager
 net.davidotek.pupgui2
 net.lutris.Lutris
