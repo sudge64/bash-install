@@ -54,7 +54,7 @@ then
     server_install
     echo "Install Graphical packages"
     dnf install $(cat packages/dnf_graphical.txt) -y
-    echo "Install pipx"
+    echo "Install pipx for venv"
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
 else
