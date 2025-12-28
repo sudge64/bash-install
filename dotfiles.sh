@@ -56,10 +56,16 @@ if [ ! -f /home/$user_name/.config/rofi/config.rasi ]
 then
     echo "Set up rofi"
     sudo -u $user_name git clone https://github.com/catppuccin/rofi ../rofi
-    cd ../rofi/basic
-    ./install.sh
-    cd ../../bash-install
+    if [ ! -d /home/$user_name/.config/rofi ]
+    then
+        mkdir -p /home/$user_name/.config/rofi
+    fi
     sudo -u $user_name cp ./files/config.rasi /home/$user_name/.config/rofi/
+    if [ ! -d /home/$user_name/.local/share/rofi/themes ]
+    then
+        mkdir -p /home/$user_name/.local/share/rofi/themes
+    fi
+    cp ../rofi/themes/catppuccin-macchiato.rasi /home/$user_name/.local/share/rofi/themes
 fi
 
 if [ ! -f /home/$user_name/.config/waybar/config.jsonc ]
