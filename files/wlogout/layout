@@ -5,9 +5,9 @@
     "keybind" : "l"
 }
 {
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "Hibernate",
+    "label" : "uefi",
+    "action" : "systemctl reboot --firmware-setup",
+    "text" : "System UEFI",
     "keybind" : "h"
 }
 {
