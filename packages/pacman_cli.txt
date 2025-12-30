@@ -37,6 +37,7 @@ rocm-smi-lib
 rpcbind
 sbctl
 tesseract-data-eng
+tex-gyre-fonts
 texlive-binextra
 texlive-fontsrecommended
 texlive-latex
