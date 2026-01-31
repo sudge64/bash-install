@@ -26,7 +26,7 @@ This one is more for my personal usecase.
 
 If `Lazy` refuses to install the plugins to `$home/.local/share/nvim/lazy`, then `rm -rf *` on everything in said directory.
 
-You should be able to open `nvim` again and it will re-downloadthe plugins.
+You should be able to open `nvim` again and it will re-download the plugins.
 
 You may have to run `git config --global --add safe.directory /home/cjwade/.local/share/nvim/lazy/*directory_name*` first.
 
