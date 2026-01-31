@@ -38,5 +38,5 @@ elif [ "$choice" -eq 2 ]
 then 
     server_install
 else
-    echo "invalid choice?"
+    echo "Invalid choice?"
 fi

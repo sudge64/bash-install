@@ -46,7 +46,7 @@ function check_choice(){
     then 
         echo "servers do not typically need flatpaks."
     else
-        echo "invalid choice?"
+        echo "Invalid choice?"
     fi
 }
 

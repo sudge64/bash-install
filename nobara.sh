@@ -58,5 +58,5 @@ then
     python3 -m pip install --user pipx
     python3 -m pipx ensurepath
 else
-    echo "invalid choice?"
+    echo "Invalid choice?"
 fi

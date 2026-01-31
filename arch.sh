@@ -44,7 +44,7 @@ elif [ "$choice" -eq 2 ]
 then 
     server_install
 else
-    echo "invalid choice?"
+    echo "Invalid choice?"
 fi
 
 if [ "$choice_hyprland" -eq 1 ]
