@@ -13,6 +13,7 @@ return {
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme("catppuccin-macchiato")
+			--vim.cmd.colorscheme("catppuccin-latte")
 		end,
 	},
 	{
@@ -59,7 +60,7 @@ return {
 		opts = {
 			options = {
 				icons_enabled = true,
-				theme = "catppuccin",
+				theme = catppuccin,
 				component_separators = "|",
 				section_separators = "",
 			},
