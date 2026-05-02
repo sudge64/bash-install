@@ -75,7 +75,7 @@ then
     apt update && apt upgrade && apt install wget -y
     source ./debian.sh -c $choice
     check_choice
-elif grep -q "Arch" $release_file || grep -q "Artix" $release_file
+elif grep -q "Arch" $release_file || grep -q "Artix" $release_file || grep -q "CachyOS" $release_file
 then
     pacman -Syu && pacman -S wget reflector -y
 
