@@ -2,6 +2,5 @@ banana-cursor-bin
 grimblast-git
 hyprland-qtutils
 nvm
-vdhcoapp
 wkhtmltopdf-static
 wlogout
