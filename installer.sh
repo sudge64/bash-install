@@ -98,6 +98,7 @@ then
         source ./steamdeck.sh
     else
         sudo reflector --verbose --country 'United States' -l 10 --sort rate --save /etc/pacman.d/mirrorlist
+        source ./basic.sh
         source ./arch.sh -c $choice -h $choice_hyprland -u $SUDO_USER
 
     fi

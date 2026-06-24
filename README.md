@@ -30,5 +30,5 @@ You should be able to open `nvim` again and it will re-download the plugins.
 
 You may have to run `git config --global --add safe.directory /home/cjwade/.local/share/nvim/lazy/*directory_name*` first.
 
-This is really for users who have their `/home` on a different partition or physical device.
+This is intended for users who have their `/home` on a different partition or physical device.
 
