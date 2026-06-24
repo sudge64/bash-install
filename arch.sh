@@ -33,6 +33,15 @@ function server_install(){
     echo "Remember! sudo systemctl start libvirtd.service"
 }
 
+function install_aur_helper(){
+    echo "Installing Paru"
+    git clone https://aur.archlinux.org/paru.git ../paru
+    cd ../paru
+    makepkg -si
+    cd ../bash-install
+    paru -S $(cat packages/paru.txt)
+}
+
 if [ "$choice" -eq 1 ]
 then
     server_install
@@ -43,6 +52,7 @@ then
 elif [ "$choice" -eq 2 ]
 then 
     server_install
+    install_aur_helper
 else
     echo "Invalid choice?"
 fi
@@ -54,12 +64,7 @@ then
     gsettings set org.gnome.desktop.interface color-scheme prefer-dark
     echo "Moving hyprland conf files"
     sudo -u $user_name cp -ruv ./files/hypr/ /home/$user_name/.config/
-    echo "Installing Paru"
-    git clone https://aur.archlinux.org/paru.git ../paru
-    cd ../paru
-    makepkg -si
-    cd ../bash-install
-    paru -S $(cat packages/paru.txt)
+    install_aur_helper
     source ./catppuccin.sh
 else
     echo "Not Installing Hyprland"
