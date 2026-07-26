@@ -2,7 +2,7 @@ configuration{
     modi: "drun,calc,emoji,window,run";
     icon-theme: "Adwaita";
     show-icons: true;
-    terminal: "kitty";
+    terminal: "alacritty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
