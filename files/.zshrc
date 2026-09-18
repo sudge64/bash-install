@@ -136,10 +136,13 @@ alias cd="z"
 unalias zi
 alias cdi="zi"
 alias lgc="looking-glass-client -F"
+alias cat="bat -p"
 
 # Exports
 export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/platform-tools:$PATH"
+export PATH="$HOME/.local/share/pnpm/bin:$PATH"
 export TERM=xterm-256color
 export EDITOR='nvim'
 if grep -q "SteamOS" /etc/os-release
@@ -147,6 +150,8 @@ then
     export SADX="/home/deck/.local/share/Steam/steamapps/common/Sonic Adventure DX"
     export SA2B="/home/deck/.local/share/Steam/steamapps/common/Sonic Adventure 2"
 else
-    export SADX="/media/cjwade/sandisk2tb/SteamLibrary/steamapps/common/Sonic Adventure DX"
-    export SA2B="/media/cjwade/sandisk2tb/SteamLibrary/steamapps/common/Sonic Adventure 2"
+    export SADX="/media/cjwade/crucialp310/SteamLibrary/steamapps/common/Sonic Adventure DX"
+    export SA2B="/media/cjwade/crucialp310/SteamLibrary/steamapps/common/Sonic Adventure 2"
 fi
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
+export MAKEFLAGS=-j$(nproc)
