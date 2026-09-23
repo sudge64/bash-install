@@ -103,7 +103,6 @@ then
 
     fi
     check_choice
-# Macintosh
 elif sw_vers -productName | grep "macOS"
 then
     source ./macintosh.sh
